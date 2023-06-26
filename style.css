@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Sedgwick Ave:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oregano:300,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    background: radial-gradient(#c0eaf1, #daadee);
+    font-family: 'Oregano';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.poke-container {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: auto;
+    max-width: 1200px;
+}
+.pokemon {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, .5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #FCF7DE;
+}
+.pokemon .image-container {
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    overflow: hidden;
+}
+.pokemon .image-container img {
+    /* height: 150px; */
+    max-width: 90%;
+    margin-top: 20px;
+}
+h2 {
+    margin: 10px auto 20px;
+}
+.slogan {
+    font-family: 'Sedgwick Ave';
+    font-size: 30pt;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: rgb(40, 103, 249);
+    -webkit-text-stroke-width: 2.5px;
+}
+button, form button{
+    width: 9ch;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #c0eaf1;
+    padding: 4px 8px;
+    border-radius: 16px;
+    margin: 10px;
+}
+.reset {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    width: fit-content;
+    border: none;
+    background: transparent;
+    /* border: 2px solid red; */
+}
+#index-page, #game-page{
+    text-align: center;
+}
+.G {transform: translate(30px, 17px) rotate(-8deg);}
+.o {transform: translate(28px, 15px) rotate(-7deg);}
+.t1 {transform: translate(25px, 13px) rotate(-6deg);}
+.t2 {transform: translate(20px, 10px) rotate(-5deg);}
+.a1 {transform: translate(16px, 8px) rotate(-4deg);}
+.m1 {transform: translate(10px, 6px) rotate(-3deg);}
+.a2 {transform: translate(8px, 3px) rotate(-2deg);}
+.t3 {transform: translate(5px, 2px) rotate(-1deg);}
+.c {transform: translate(0px, 0px) rotate(0deg);}
+.h {transform: translate(-05px, 1px) rotate(1deg);}
+.apos {transform: translate(-10px, 3px) rotate(25deg);}
+.e {transform: translate(-14px, 2px) rotate(3deg);}
+.m2 {transform: translate(-17px, 4px) rotate(6deg);}
+.a3 {transform: translate(-25px, 10px) rotate(5deg);}
+.l1 {transform: translate(-27px, 13px) rotate(6deg);}
+.l2 {transform: translate(-29px, 15px) rotate(7deg);}
+.excl {transform: translate(-32px, 17px) rotate(6deg);}
+span{
+    display: inline-block;
+}
+.hidden {
+    display: none;
+}
+#players-section {
+    font-size: 16pt;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 10px ridge blue;
+}
+.player {
+    border: 1px solid black;
+    text-align: center;
+    height: 100%;
+    min-width: 300px;
+    max-width: 500px;
+}
+.player-name {
+    text-decoration: underline;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: rgb(40, 103, 249);
+    -webkit-text-stroke-width: 1.5px;
+}
+.player-score, .player-wins {
+    border: 2px solid blue;
+}
+.player1 .player-score, .player-wins {
+    border-right: 1px solid blue;
+}
+.player2 .player-score, .player-wins {
+    border-left: 1px solid blue;
+}
+.card-game {
+    width: 100%;
+    height: 70%;
+    border: 2px solid red;
+}

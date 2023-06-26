@@ -1,0 +1,52 @@
+<!-- TODO:
+        1) ADD A FLIP CARD FUNCTION TO THE CARD ON SETTINGS PAGE (POSSIBLY WITH A PIKACHU SOUND BITE)
+        
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Match Game</title>
+</head>
+<body>
+
+    <button class="reset" onclick=resetGame()>
+        <h2 class="slogan">
+            <span class="G">G</span><span class="o">o</span><span class="t1">t</span><span class="t2">t</span><span class="a1">a</span>
+            <span class="m1">m</span><span class="a2">a</span><span class="t3">t</span><span class="c">c</span><span class="h">h</span><span class="apos">'</span><span class="e">e</span><span class="m2">m</span>
+            <span class="a3">a</span><span class="l1">l</span><span class="l2">l</span><span class="excl">!</span>
+        </h2>
+    </button>
+
+    <section id="index-page" class="">
+        <button id="startGame" class="" onclick=startGame()>Play With a Friend</button>
+        <section class="poke-container" id="poke-container">
+            <section class="pokemon">
+                <section class="image-container">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id="game-page" class="">
+        <section class="card-game"></section>
+        <section id="players-section">
+            <div class="player1 player">
+                <p class="player-name">Player 1</p>
+                <p class="player-score">Current Score: </p>
+                <p class="player-wins">Wins: </p>
+            </div>
+            <div class="player2 player">
+                <p class="player-name">Player 2</p>
+                <p class="player-score">Current Score: </p>
+                <p class="player-wins">Wins: </p>
+            </div>
+        </section>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
