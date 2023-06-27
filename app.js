@@ -16,7 +16,8 @@ const startGame = () => {
     indexPage.classList = "hidden";
 };
 
-const cardSetAmount = 15;
+// const cardSetAmount = 15;
+const cardSetAmount = 9;
 const cardSelection = [];
 
 for (i = 0; i < cardSetAmount; i++) {
@@ -54,7 +55,7 @@ const shuffle = (arr, timeKeep=6) => {
     return shuffle(newArr, timeKeep)
     } else {
         return newArr
-    }
+    };
 };
 const shuffledCards = shuffle(cardSelection);
 
@@ -79,8 +80,8 @@ const colors = {
 // ----------------------------------------------------
 const main_types = Object.keys(colors);
 const fetchPokemon = async () => {
-    for (let i = 1; i <= shuffledCards.length; i++) {
-        // console.log(shuffledCards[i]);
+    for (let i = 0; i < shuffledCards.length; i++) {
+        console.log(shuffledCards[i]);
         await getPokemon(shuffledCards[i]);
     };
 };
@@ -118,4 +119,4 @@ fetchPokemon();
 // console.log("gamePage", gamePage);
 // console.log("poke_container", poke_container);
 // console.log("cardSelection", cardSelection);
-// console.log("shuffledCards", shuffledCards);
+console.log("shuffledCards", shuffledCards);

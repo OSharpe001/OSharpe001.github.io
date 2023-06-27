@@ -16,13 +16,20 @@ body {
     justify-content: center;
     margin: 0;
 }
-.poke-container {
+.card-game {
+    width: 100%;
+    height: 70%;
+    border: 2px solid red;
+}
+#poke-container {
     display: flex;
     flex-wrap:wrap;
     align-items: space-between;
     justify-content: center;
     margin: auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    max-width: 75%;
+    border: 2px solid green;
 }
 .pokemon {
     background-color: #eee;
@@ -109,11 +116,16 @@ span{
     border: 10px ridge blue;
 }
 .player {
-    border: 1px solid black;
     text-align: center;
     height: 100%;
     min-width: 300px;
     max-width: 500px;
+    margin: 20px;
+    /* padding: 20px; */
+    border: 1px solid black;
+}
+.players-turn {
+    background-color: #c7eead;
 }
 .player-name {
     text-decoration: underline;
@@ -130,8 +142,7 @@ span{
 .player2 .player-score, .player-wins {
     border-left: 1px solid blue;
 }
-.card-game {
-    width: 100%;
-    height: 70%;
-    border: 2px solid red;
+.face-down {
+    background:#fae475
 }
+
