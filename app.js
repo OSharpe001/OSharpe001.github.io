@@ -35,27 +35,9 @@ for (i = 0; i < cardSetAmount; i++) {
     }
 };
 cardSelection.push(...cardSelection);
-const shuffle = (arr, timeKeep=6) => {
-    if (timeKeep<arr.length) {
-    // shuffleAmount = 5;
-    oldArr = [...arr];
-    newArr = [];
-    const sliceStart = Math.ceil(arr.length/4);
-    const sliceEnd = timeKeep;//Math.ceil(arr.length/2);
-    // console.log("sliceStart", sliceStart);
-    // console.log("sliceEnd", sliceEnd);
-    segment = oldArr.slice(sliceStart, sliceEnd);
-    oldArr.splice(sliceStart, sliceEnd - sliceStart);
-    // console.log("SEGMENT WITHIN SHUFFLE FUNCTION: ", segment);
-    // console.log("ARR WITHIN SHUFFLE FUNCTION: ", arr);
-    newArr.push(...segment);
-    newArr.push(...oldArr);
-    timeKeep+=1;
-    // console.log(`Turn ${timeKeep}. Current array: ${newArr}`);
-    return shuffle(newArr, timeKeep)
-    } else {
-        return newArr
-    };
+const shuffle = (arr) => {
+     arr.sort(() => Math.random() - 0.5);
+     return arr
 };
 const shuffledCards = shuffle(cardSelection);
 
@@ -89,11 +71,18 @@ const getPokemon = async (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const res = await fetch(url);
     const data = await res.json();
-    createPokemonCard(data);
+    createPokemonCard(data, id);
 };
-const createPokemonCard = (pokemon) => {
+const createPokemonCard = (pokemon, id) => {
     const pokemonEl = document.createElement("div");
-    pokemonEl.classList.add("pokemon");
+    // pokemonEl.classList.add("pokemon");
+    pokemonEl.className = `${id}`;
+    pokemonEl.id = `face-down`;
+    pokemonEl.addEventListener("click", () => {
+        // pokemonEl.classList.add("pokemon");
+        pokemonEl.id = "flip-up";
+        setTimeout(()=>{pokemonEl.id = ""; pokemonEl.classList.add("pokemon")}, 1000)
+    })
 
     const poke_types = pokemon.types.map(type => type.type.name);
     console.log("poke_types", poke_types);

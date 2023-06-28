@@ -14,5 +14,5 @@ https://www.tabnine.com/academy/javascript/how-to-redirect-url-javascript/
 **Rounding up to the nearest number**
 https://www.w3schools.com/jsref/jsref_ceil.asp
 
-**Figuring out how to shuffle an array (should've just looked at the solution instead of taking up the challenge to create it. Their's seem much simpler!)**
+**Figuring out how to shuffle an array**
 https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle(array,%2C%202%5D%20%2F%2F%20...
