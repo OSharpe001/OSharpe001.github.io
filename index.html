@@ -23,7 +23,7 @@
     <section id="index-page" class="">
         <button id="startGame" class="" onclick=startGame()>Play With a Friend</button>
 
-        <section class="pokemon">
+        <section class="pokemon index-card">
             <section class="image-container">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
             </section>
@@ -36,16 +36,19 @@
 
             </section>
         </section>
+        <!-- <button class="change-player" onclick="changeCurrentPlayer()">Change Player</button>
+        <button class="change-player" onclick="changeCurrentPlayerScore()">Change Player's Score</button>
+        <button class="change-player" onclick="changeCurrentPlayerWins()">Change Player's Wins</button> -->
         <section id="players-section">
-            <div class="player1 player players-turn">
-                <p class="player-name">Player 1</p>
-                <p class="player-score">Current Score: </p>
-                <p class="player-wins">Wins: </p>
+            <div class="player1 player">
+                <p class="player1-name">Player 1</p>
+                <p class="player1-score">Current Score: <span class="player1-score-amount"></span></p>
+                <p class="player1-wins">Wins: <span class="player1-wins-amount"></span></p>
             </div>
             <div class="player2 player">
-                <p class="player-name">Player 2</p>
-                <p class="player-score">Current Score: </p>
-                <p class="player-wins">Wins: </p>
+                <p class="player2-name">Player 2</p>
+                <p class="player2-score">Current Score: <span class="player2-score-amount"></span></p>
+                <p class="player2-wins">Wins: <span class="player2-wins-amount"></span></p>
             </div>
         </section>
     </section>
