@@ -1,5 +1,5 @@
 # Welcome to the Pokemon Memory Match Game's Readme.
-**Here, we'll discuss issues and resources used to get past them (if any), issues that I could'nt (yet) overcome, technologies used (if any) and cap it all off with a nice little "User Story" of expectations when using the app.**
+**Here, we'll discuss issues and resources used to get past them, issues that I couldn't (yet) overcome, technologies used, a nice little "User Story" of expectations when using the app and cap it all off with my future goals for this app.**
 
 
 ## Issues that needed research/resource(s) and troubling issues:
@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=vJtN7vGvmS4
 
 **Placing an arch on my slogan**
 https://www.geeksforgeeks.org/how-to-create-a-curve-text-using-css3-canvas/
-A lot of work for a lottle design.
+A lot of work for a little design.
 
 **Using JavaScript to navigate to another page within my app**
 https://www.tabnine.com/academy/javascript/how-to-redirect-url-javascript/
@@ -17,20 +17,18 @@ https://www.tabnine.com/academy/javascript/how-to-redirect-url-javascript/
 Ended up making it a single page app, utilizing CSS to hide the "currently unnecessary page".
 
 **Getting a variable from one JavaScript file to another**
---Using import/export statements is not working. Will probably have to utilize only one JavaScript file for entire app. Also had to incorporate my game onto the main page, index.html (difficulty getting data to transfer between pages. Ended up making a single page app).--
+--Using import/export statements is not working. Will probably have to utilize only one JavaScript file for entire app. Also had to incorporate my game onto the main page, "index.html" (difficulty getting data to transfer between pages. Ended up making a single page app).--
 
 **Rounding up to the nearest number**
 https://www.w3schools.com/jsref/jsref_ceil.asp
---The shuffle-cards algorithm I created that utilized this was redundant (shuffle had the same placement with the same number of cards to shuffle)ended up not utilizing "Math.ceil" in this app--
+--The shuffle-cards algorithm I created that utilized this was redundant (shuffle had the same placement when shuffling same number of cards). Ended up not utilizing "Math.ceil" in this app--
 
 **Figuring out how to shuffle an array**
 https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle(array,%2C%202%5D%20%2F%2F%20...
 
 **GitHub servers went down for more than a few minutes, making my app inoperable**
 --I need to collect all the Pokemon data and refactor my code to be able to allow my app to work without any outside dependencies--
-Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a Javascript file to represent each picture and assosiated info. Did not utilize this, as yet, since it will take a decent amount of refactoring but still considering it.
-
-**Having **
+Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a Javascript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to  refactor but still considering it.
 
 
 ## Technologies Used
@@ -39,8 +37,7 @@ Spent a lot of time gathering Pokemon pictures from the web, cleaning the images
 
 **Currently, this program utilizes info from a RESTful API, namely "PokeAPI" from GitHub (link:https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/) (subject to change)**
 
-**This app utilizes the client's local storage to keep track of round-wins**
-
+**This app utilizes the client's local storage to keep track of (and retrieve) round-wins**
 
 
 ## Live Site Link:
@@ -64,7 +61,7 @@ Spent a lot of time gathering Pokemon pictures from the web, cleaning the images
 
 ### 7- As a user, once all cards are matched and the winner of the round is announced, I expect all the cards to be randomized and flipped face-down to begin the next round. (NOT YET ACHIEVED)
 
-### 8- As a user, at the beginning of each subsequent round, I expect that the computer will keep track of all of the prior wins of both my opponent and myself.
+### 8- As a user, at the beginning of each subsequent round, I expect that the computer will keep track of all of the prior round-wins of both my opponent and myself.
 
 ### 9- As a user, I expect the winner of the prior round to go first in the current round. (NOT YET ACHIEVED)
 
@@ -77,26 +74,16 @@ Spent a lot of time gathering Pokemon pictures from the web, cleaning the images
 ### 13- As a user, I also expect there to be a way to reset the tournament, manually.
 
 
-## Stretch Goals (yet achieved)
+## Stretch Goals (YET TO ACHIEVE)
 
 **1- Mobile responsive design**
 
-**2- Redesign the "Start Game Page" to include a menu that includes a two-player, single-round option.**
+**2- Redesign the "Start Game Page" to include a menu that includes a single-round option.**
 
-**3- Redesign the "Start Game Page" to include a menu that includes a name input ability to personalize the player's score box.**
+**3- Redesign the "Start Game Page" to include a menu that has a name input ability to personalize the player's score box.**
 
-**1- Redesign the "Start Game Page" (and game algorithm) to include a menu that includes a single player option and format where the player has to "beat the clock".**
+**4- Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock".**
 
-**1- Redesign the "Start Game Page" (and game algorithm) to include a menu that includes a "best of nine" mode wher a player has to have 5 round-wins to win the tournament.**
+**5- Redesign the "Start Game Page" (and game algorithm) to include a menu that has a "best of nine" mode where a player has to have 5 round-wins to win the tournament.**
 
-**1- Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be incresed for more difficult levels).**
-
-**1- Mobile responsive design**
-
-**1- Mobile responsive design**
-
-**1- Mobile responsive design**
-
-**1- Mobile responsive design**
-
-**1- Mobile responsive design**
+**6- Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be increased for more difficult levels).**
