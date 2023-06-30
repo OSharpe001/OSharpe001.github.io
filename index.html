@@ -33,12 +33,18 @@
     <section id="game-page" class="">
         <section class="card-game">
             <section class="poke-container" id="poke-container">
-
+                <p class="hidden winners-announcement"><span class="winner-name"></span> Wins This Round!</p>
+                <p class="hidden tournament-winners-announcement"><span class="tournament-winner-name">HEY THERE</span> Won The Tournament!</p>
             </section>
         </section>
-        <!-- <button class="change-player" onclick="changeCurrentPlayer()">Change Player</button>
+        <button class="change-player" onclick="changeCurrentPlayer()">Change Player</button>
         <button class="change-player" onclick="changeCurrentPlayerScore()">Change Player's Score</button>
-        <button class="change-player" onclick="changeCurrentPlayerWins()">Change Player's Wins</button> -->
+        <button class="change-player" onclick="changeCurrentPlayerWins()">Change Player's Wins</button>
+        <button class="change-player" onclick="resetGamePage()">Reset Game Page</button>
+        <button class="change-player" onclick="announceWinner()">Announce Winner</button>
+        <button class="change-player" onclick="announceTournamentWinner()">Announce Tournament Winner</button>
+
+
         <section id="players-section">
             <div class="player1 player">
                 <p class="player1-name">Player 1</p>

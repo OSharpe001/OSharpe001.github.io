@@ -29,7 +29,7 @@ body {
     margin: auto;
     /* max-width: 1200px; */
     max-width: 75%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .pokemon {
     border-radius: 10px;
@@ -203,4 +203,45 @@ span{
       100% {
         transform: rotateY(-180deg);
       }
+  }
+  .winners-announcement, .tournament-winners-announcement {
+    position: absolute;
+    text-align: center;
+    align-self: center;
+    font-size: 70pt;
+    text-decoration: underline;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: rgb(40, 103, 249);
+    -webkit-text-stroke-width: 4px;
+    animation-name: winners-announcement;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  @keyframes winners-announcement {
+    0% {
+        font-size: 5pt;
+        /* top: 38%; */
+        /* left: 30%; */
+        /* text-align: center; */
+      }
+      25% {
+        font-size: 30pt;
+        /* text-align: center; */
+      }
+      50% {
+        font-size: 60pt;
+        /* text-align: center; */
+      }
+      75% {
+        font-size: 20pt;
+        /* text-align: center; */
+      }
+      100% {
+        font-size: 70pt;
+        /* text-align: center; */
+      }
+  }
+  .winner-name, .tournament-winner-name {
+    text-decoration: underline;
   }
