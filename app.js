@@ -237,20 +237,24 @@ const changeCurrentPlayerScore = () => {
         if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) === 9) {
             // console.log("WE HAVE A WINNER!");
             changeCurrentPlayerWins();
+            setTimeout(resetGamePage(), 9000);
         };
     };
 };
 
-// CHANGE THE CURRENT PLAYERS "WINS" FUNCTION
+// FUNCTION TO CHANGE PLAYER'S "WINS"
 const changeCurrentPlayerWins = () => {
-    for (i = 0; i < players.length; i++) {
-        if (players[i].player.classList[2] === "players-turn") {
-            players[i].wins.innerText++;
-            storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
-            announceWinner(players[i].name.innerHTML);
-            // setTimeout(resetGamePage(), 9000);
-        };
+    if (parseInt(players[0].score.innerText)>parseInt(players[1].score.innerText)) {
+        players[0].wins.innerText++;
+        storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
+        announceWinner(players[0].name.innerHTML);
+    } else {
+        players[1].wins.innerText++;
+        storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
+        announceWinner(players[1].name.innerHTML);
     };
+    
+    setTimeout(resetGamePage(), 9000);
     if (parseInt(viewFlipped()[0].split(" ")[3]) === 3) {
         announceTournamentWinner(viewFlipped()[0].split(" ").slice(0,2).join(" "));
         // setTimeout(resetGame(), 8000);
@@ -258,8 +262,8 @@ const changeCurrentPlayerWins = () => {
     } else if (parseInt(viewFlipped()[1].split(" ")[3]) === 3) {
         announceTournamentWinner(viewFlipped()[1].split(" ").slice(0,2).join(" "));
         // setTimeout(resetGame(), 8000);
-
     };
+    // setTimeout(resetGamePage(), 9000);
 };
 // console.log(viewFlipped()[0].split(" ").slice(0,2).join(" "));
 const resetGamePage = () => {
