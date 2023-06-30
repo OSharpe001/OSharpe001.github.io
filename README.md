@@ -75,3 +75,28 @@ Spent a lot of time gathering Pokemon pictures from the web, cleaning the images
 ### 12- As a user, if I begin another tournament, I expect all of the prior tournament's scores to be reset.
 
 ### 13- As a user, I also expect there to be a way to reset the tournament, manually.
+
+
+## Stretch Goals (yet achieved)
+
+**1- Mobile responsive design**
+
+**2- Redesign the "Start Game Page" to include a menu that includes a two-player, single-round option.**
+
+**3- Redesign the "Start Game Page" to include a menu that includes a name input ability to personalize the player's score box.**
+
+**1- Redesign the "Start Game Page" (and game algorithm) to include a menu that includes a single player option and format where the player has to "beat the clock".**
+
+**1- Redesign the "Start Game Page" (and game algorithm) to include a menu that includes a "best of nine" mode wher a player has to have 5 round-wins to win the tournament.**
+
+**1- Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be incresed for more difficult levels).**
+
+**1- Mobile responsive design**
+
+**1- Mobile responsive design**
+
+**1- Mobile responsive design**
+
+**1- Mobile responsive design**
+
+**1- Mobile responsive design**
