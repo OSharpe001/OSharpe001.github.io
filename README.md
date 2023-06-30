@@ -1,4 +1,5 @@
-## Issues that needed research/resource(s):
+## Issues that needed research/resource(s) and troubling issues:
+
 **Creating bubble text**
 https://www.youtube.com/watch?v=vJtN7vGvmS4
 
@@ -20,4 +21,13 @@ https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle(ar
 **GitHub servers went down for more than a few minutes, making my app inoperable**
 --I need to collect all the Pokemon data and refactor my code to be able to allow my app to work without any outside dependencies--
 
-****
+
+## Technologies Used
+
+**Currently, this app uses JavaScript's "async/await" method to gather new Pokemon info for each refresh (subject to change)**
+
+**Currently, this program utilizes info from a RESTful API, namely "PokeAPI" from GitHub (link:https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/)**
+
+
+## Live Site Link:
+### **https://osharpe001.github.io**

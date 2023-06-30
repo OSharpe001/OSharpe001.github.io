@@ -275,6 +275,12 @@ const changeCurrentPlayerWins = () => {
 };
 // console.log(viewFlipped()[0].split(" ").slice(0,2).join(" "));
 const resetGamePage = () => {
+    if (roundCongrats.classList.length === 1) {
+        roundCongrats.classList.toggle("hidden");
+    };
+    if (tournamentCongrats.classList.length === 1) {
+        tournamentCongrats.classList.toggle("hidden");
+    };
     initializeScores();
     poke_container.innerHTML = "";
     initializeGamePage();
