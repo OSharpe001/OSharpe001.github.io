@@ -6,9 +6,10 @@ const poke_container = document.querySelector("#poke-container");
 const roundCongrats = document.querySelector(".winners-announcement");
 const winnerName = document.querySelector(".winner-name");
 const tournamentCongrats = document.querySelector(".tournament-winners-announcement");
-const tournamentWinnerName = document.querySelector(".winner-name");
+const tournamentWinnerName = document.querySelector(".tournament-winner-name");
 let cardSetAmount;
 let cardSelection;
+
 
 // LIST THAT KEEP TRACK OF FLIPPED CARDS TO DICIPHER SCORING SITUATIONS AND FLIPPING BACK UNMATCHED CARDS (THOUGH IT'S NOT HELPING WITH THE LATTER, FOR SOME REASON)
 let flippedCardIdList;
@@ -209,8 +210,8 @@ const createPokemonCard = (pokemon, id) => {
 
             // FUNCTION TO AUTOMATICALLY FLIP BACK UNMATCHED CARDS
             ()=>{flippedCards[0].classList.replace("pokemon", "flip-down");flippedCards[1].classList.replace("pokemon", "flip-down");}
-            setTimeout(() => {flipCardDown(flippedCards[0], id);flipCardDown(flippedCards[1], id)}, 1750);
-            setTimeout(()=>{flippedCards = []/*, 2000*/;flippedCardIdList = [];changeCurrentPlayer();}, 2000);
+            setTimeout(() => {flipCardDown(flippedCards[0], id);flipCardDown(flippedCards[1], id)}, 1000);
+            setTimeout(()=>{flippedCards = [];flippedCardIdList = [];changeCurrentPlayer();}, 2000);
         };
     });
 };
@@ -233,33 +234,40 @@ const changeCurrentPlayerScore = () => {
             players[i].score.innerText++;
         };
 
+        // ------******-----NEED TO TAKE THIS SECTION OUT OF THE IF STATEMENT AND SEE IF ANYTHING WILL WORK BETTER!------******----- //
         // WINNER ANOUNCEMENT/ CHANGING OF WIN-TALLY/ RESET OF GAME
+        // if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) === 9) {
+        //     // console.log("WE HAVE A WINNER!");
+        //     changeCurrentPlayerWins();
+
+            // *****RESET GAME FUNCTION ONLY WORKS WHEN BOTH PLAYER'S SCORES === 9 IN THIS IF STATEMENT
+            // *****THE SETTIMEOUT FUNCTION IS NOT WORKING AT ALL IN THIS IF STATEMENT (INSTANTLY EXECUTES THE FUNCTION, WITHIN)
+            // setTimeout(resetGamePage(), 9000);
+    };
         if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) === 9) {
             // console.log("WE HAVE A WINNER!");
             changeCurrentPlayerWins();
-            setTimeout(resetGamePage(), 9000);
         };
     };
-};
 
 // FUNCTION TO CHANGE PLAYER'S "WINS"
 const changeCurrentPlayerWins = () => {
     if (parseInt(players[0].score.innerText)>parseInt(players[1].score.innerText)) {
+        console.log("ADDING A WIN TO PLAYER 1");
         players[0].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
-        announceWinner(players[0].name.innerHTML);
-    } else {
+        announceRoundWinner(players[0].name.innerHTML);
+    } else if (parseInt(players[1].score.innerText)>parseInt(players[0].score.innerText)) {
+        console.log("ADDING A WIN TO PLAYER 2");
         players[1].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
-        announceWinner(players[1].name.innerHTML);
+        announceRoundWinner(players[1].name.innerHTML);
     };
-    
-    setTimeout(resetGamePage(), 9000);
-    if (parseInt(viewFlipped()[0].split(" ")[3]) === 3) {
+    if (parseInt(viewFlipped()[0].split(" ")[3]) >= 3) {
         announceTournamentWinner(viewFlipped()[0].split(" ").slice(0,2).join(" "));
         // setTimeout(resetGame(), 8000);
 
-    } else if (parseInt(viewFlipped()[1].split(" ")[3]) === 3) {
+    } else if (parseInt(viewFlipped()[1].split(" ")[3]) >= 3) {
         announceTournamentWinner(viewFlipped()[1].split(" ").slice(0,2).join(" "));
         // setTimeout(resetGame(), 8000);
     };
@@ -271,16 +279,27 @@ const resetGamePage = () => {
     poke_container.innerHTML = "";
     initializeGamePage();
     fetchPokemon();
+};
+
+const announceRoundWinner = (winner) => {
     if (roundCongrats.classList.length === 1) {
         roundCongrats.classList.toggle("hidden");
     };
-    // roundCongrats.classList.toggle("hidden");
-};
-
-const announceWinner = (winner) => {
-    // winnerName.innerHTML = winner;
+    if (tournamentCongrats.classList.length === 1) {
+        tournamentCongrats.classList.toggle("hidden");
+    };
+    if (player1.score.innerText > player2.score.innerText) {
+        winner = player1.name.innerText;
+    } else if (player1.score.innerText < player2.score.innerText) {
+        winner = player2.name.innerText;
+    };
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
+
+    console.log("announceRoundWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
+    console.log("announceRoundWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
+    // *****SETTIMEOUT FUNCTION ISN'T WORKING WITHIN THIS FUNCTION, EITHER (INSTANTLY EXECUTES FUNCTION, WITHIN)
+    // setTimeout(resetGamePage(), 9000);
     // setTimeout(roundCongrats.classList.toggle("hidden"), 10001);
 };
 
@@ -288,9 +307,21 @@ const announceTournamentWinner = (winner) => {
     if (roundCongrats.classList.length === 1) {
         roundCongrats.classList.toggle("hidden");
     };
-    tournamentCongrats.classList.toggle("hidden");
+    if (tournamentCongrats.classList.length === 1) {
+        tournamentCongrats.classList.toggle("hidden");
+    };
+    if (player1.wins.innerText > player2.wins.innerText) {
+        winner = player1.name.innerText;
+    } else if (player1.wins.innerText < player2.wins.innerText) {
+        winner = player2.name.innerText;
+    };
     tournamentWinnerName.innerHTML = winner;
-    // setTimeout(resetGame(), 8000);
+    tournamentCongrats.classList.toggle("hidden");
+
+    console.log("announceTournamentWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
+    console.log("announceTournamentWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
+    // *****SETTIMEOUT FUNCTION ISN'T WORKING WITHIN THIS FUNCTION, EITHER (INSTANTLY EXECUTES FUNCTION, WITHIN)
+    // setTimeout(resetGame(), 18000);
 };
 // console.log("VIEWFLIPPED: ", viewFlipped());
 // console.log("VIEWFLIPPED PLAYER 1 SCORE: ", viewFlipped()[0].split(" ")[3]);
