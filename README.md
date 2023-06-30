@@ -16,3 +16,8 @@ https://www.w3schools.com/jsref/jsref_ceil.asp
 
 **Figuring out how to shuffle an array**
 https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle(array,%2C%202%5D%20%2F%2F%20...
+
+**GitHub servers went down for more than a few minutes, making my app inoperable**
+--I need to collect all the Pokemon data and refactor my code to be able to allow my app to work without any outside dependencies--
+
+****

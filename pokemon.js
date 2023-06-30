@@ -62,847 +62,847 @@ export const pokemon = [
     {
         image: "images/11.PNG",
         number: 11,
-        name: "",
-        type: ""
+        name: "Metapod",
+        type: "bug"
     },
     {
         image: "images/12.PNG",
         number: 12,
-        name: "",
-        type: ""
+        name: "Butterfree",
+        type: "bug"
     },
     {
         image: "images/13.PNG",
         number: 13,
-        name: "",
-        type: ""
+        name: "Weedle",
+        type: "bug"
     },
     {
         image: "images/14.PNG",
         number: 14,
-        name: "",
-        type: ""
+        name: "Kakuna",
+        type: "bug"
     },
     {
         image: "images/15.PNG",
         number: 15,
-        name: "",
-        type: ""
+        name: "Beedrill",
+        type: "bug"
     },
     {
         image: "images/16.PNG",
         number: 16,
-        name: "",
-        type: ""
+        name: "Pidgey",
+        type: "normal"
     },
     {
         image: "images/17.PNG",
         number: 17,
-        name: "",
-        type: ""
+        name: "Pidgeotto",
+        type: "normal"
     },
     {
         image: "images/18.PNG",
         number: 18,
-        name: "",
-        type: ""
+        name: "Pidgeot",
+        type: "normal"
     },
     {
         image: "images/19.PNG",
         number: 19,
-        name: "",
-        type: ""
+        name: "Rattata",
+        type: "normal"
     },
     {
         image: "images/20.PNG",
         number: 20,
-        name: "",
-        type: ""
+        name: "Raticate",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/21.PNG",
         number: 21,
-        name: "",
-        type: ""
+        name: "Spearow",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/22.PNG",
         number: 22,
-        name: "",
-        type: ""
+        name: "Fearow",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/23.PNG",
         number: 23,
-        name: "",
-        type: ""
+        name: "Ekans",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/24.PNG",
         number: 24,
-        name: "",
-        type: ""
+        name: "Arbok",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/25.PNG",
         number: 25,
-        name: "",
-        type: ""
+        name: "Pikachu",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/26.PNG",
         number: 26,
-        name: "",
-        type: ""
+        name: "Raichu",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/27.PNG",
         number: 27,
-        name: "",
-        type: ""
+        name: "Sandshrew",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/28.PNG",
         number: 28,
-        name: "",
-        type: ""
+        name: "Sandslash",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/29.PNG",
         number: 29,
-        name: "",
-        type: ""
+        name: "Nidoran (F)",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/-30.PNG",
         number: 30,
-        name: "",
-        type: ""
+        name: "Nidorina",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/31.PNG",
         number: 31,
-        name: "",
-        type: ""
+        name: "Nidoqueen",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/32.PNG",
         number: 32,
-        name: "",
-        type: ""
+        name: "Nidoran (M)",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/33.PNG",
         number: 33,
-        name: "",
-        type: ""
+        name: "Nidorino",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/34.PNG",
         number: 34,
-        name: "",
-        type: ""
+        name: "Nidoking",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/35.PNG",
         number: 35,
-        name: "",
-        type: ""
+        name: "Clefairy",
+        type: "fairy"
     },
     {
-        image: "images/-.PNG",
+        image: "images/36.PNG",
         number: 36,
-        name: "",
-        type: ""
+        name: "Clefable",
+        type: "fairy"
     },
     {
-        image: "images/-.PNG",
+        image: "images/37.PNG",
         number: 37,
-        name: "",
-        type: ""
+        name: "Vulpix",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/38.PNG",
         number: 38,
-        name: "",
-        type: ""
+        name: "Ninetales",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/39.PNG",
         number: 39,
-        name: "",
-        type: ""
+        name: "Jigglypuff",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/40.PNG",
         number: 40,
-        name: "",
-        type: ""
+        name: "Wigglytuff",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/41.PNG",
         number: 41,
-        name: "",
-        type: ""
+        name: "Zubat",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/42.PNG",
         number: 42,
-        name: "",
-        type: ""
+        name: "Golbat",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/43.PNG",
         number: 43,
-        name: "",
-        type: ""
+        name: "Oddish",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/44.PNG",
         number: 44,
-        name: "",
-        type: ""
+        name: "Gloom",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/45.PNG",
         number: 45,
-        name: "",
-        type: ""
+        name: "Vileplume",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/46.PNG",
         number: 46,
-        name: "",
-        type: ""
+        name: "Paras",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/47.PNG",
         number: 47,
-        name: "",
-        type: ""
+        name: "Parasect",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/48.PNG",
         number: 48,
-        name: "",
-        type: ""
+        name: "Venonat",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/49.PNG",
         number: 49,
-        name: "",
-        type: ""
+        name: "Venomoth",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/50.PNG",
         number: 50,
-        name: "",
-        type: ""
+        name: "Diglett",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/51.PNG",
         number: 51,
-        name: "",
-        type: ""
+        name: "Dugtrio",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/52.PNG",
         number: 52,
-        name: "",
-        type: ""
+        name: "Meowth",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/53.PNG",
         number: 53,
-        name: "",
-        type: ""
+        name: "Persian",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/54.PNG",
         number: 54,
-        name: "",
-        type: ""
+        name: "Psyduck",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/55.PNG",
         number: 55,
-        name: "",
-        type: ""
+        name: "Golduck",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/56.PNG",
         number: 56,
-        name: "",
-        type: ""
+        name: "Mankey",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/57.PNG",
         number: 57,
-        name: "",
-        type: ""
+        name: "Primeape",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/58.PNG",
         number: 58,
-        name: "",
-        type: ""
+        name: "Growlithe",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/59.PNG",
         number: 59,
-        name: "",
-        type: ""
+        name: "Arcanine",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/60.PNG",
         number: 60,
-        name: "",
-        type: ""
+        name: "Poliwag",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/61.PNG",
         number: 61,
-        name: "",
-        type: ""
+        name: "Poliwhirl",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/62.PNG",
         number: 62,
-        name: "",
-        type: ""
+        name: "Poliwrath",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/63.PNG",
         number: 63,
-        name: "",
-        type: ""
+        name: "Abra",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/64.PNG",
         number: 64,
-        name: "",
-        type: ""
+        name: "Kadabra",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/65.PNG",
         number: 65,
-        name: "",
-        type: ""
+        name: "Alakazam",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/66.PNG",
         number: 66,
-        name: "",
-        type: ""
+        name: "Machop",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/67.PNG",
         number: 67,
-        name: "",
-        type: ""
+        name: "Machoke",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/68.PNG",
         number: 68,
-        name: "",
-        type: ""
+        name: "Machamp",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/69.PNG",
         number: 69,
-        name: "",
-        type: ""
+        name: "Bellsprout",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/70.PNG",
         number: 70,
-        name: "",
-        type: ""
+        name: "Weepinbell",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/71.PNG",
         number: 71,
-        name: "",
-        type: ""
+        name: "Victreebel",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/72.PNG",
         number: 72,
-        name: "",
-        type: ""
+        name: "Tentacool",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/73.PNG",
         number: 73,
-        name: "",
-        type: ""
+        name: "Tentacruel",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/74.PNG",
         number: 74,
-        name: "",
-        type: ""
+        name: "Geodude",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/75.PNG",
         number: 75,
-        name: "",
-        type: ""
+        name: "Graveler",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/76.PNG",
         number: 76,
-        name: "",
-        type: ""
+        name: "Golem",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/77.PNG",
         number: 77,
-        name: "",
-        type: ""
+        name: "Ponyta",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/78.PNG",
         number: 78,
-        name: "",
-        type: ""
+        name: "Rapidash",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/79.PNG",
         number: 79,
-        name: "",
-        type: ""
+        name: "Slowpoke",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/80.PNG",
         number: 80,
-        name: "",
-        type: ""
+        name: "Slowbro",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/81.PNG",
         number: 81,
-        name: "",
-        type: ""
+        name: "Magnemite",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/82.PNG",
         number: 82,
-        name: "",
-        type: ""
+        name: "Magneton",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/83.PNG",
         number: 83,
-        name: "",
-        type: ""
+        name: "Farfetch'd",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/84.PNG",
         number: 84,
-        name: "",
-        type: ""
+        name: "Doduo",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/85.PNG",
         number: 85,
-        name: "",
-        type: ""
+        name: "Dodrio",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/86.PNG",
         number: 86,
-        name: "",
-        type: ""
+        name: "Seel",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/87.PNG",
         number: 87,
-        name: "",
-        type: ""
+        name: "Dewgong",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/88.PNG",
         number: 88,
-        name: "",
-        type: ""
+        name: "Grimer",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/89.PNG",
         number: 89,
-        name: "",
-        type: ""
+        name: "Muk",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/90.PNG",
         number: 90,
-        name: "",
-        type: ""
+        name: "Shellder",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/91.PNG",
         number: 91,
-        name: "",
-        type: ""
+        name: "Cloyster",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/92.PNG",
         number: 92,
-        name: "",
-        type: ""
+        name: "Gastly",
+        type: "ghost"
     },
     {
-        image: "images/-.PNG",
+        image: "images/93.PNG",
         number: 93,
-        name: "",
-        type: ""
+        name: "Haunter",
+        type: "ghost"
     },
     {
-        image: "images/-.PNG",
+        image: "images/94.PNG",
         number: 94,
-        name: "",
-        type: ""
+        name: "Gengar",
+        type: "ghost"
     },
     {
-        image: "images/-.PNG",
+        image: "images/95.PNG",
         number: 95,
-        name: "",
-        type: ""
+        name: "Onix",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/96.PNG",
         number: 96,
-        name: "",
-        type: ""
+        name: "Drowzee",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/97.PNG",
         number: 97,
-        name: "",
-        type: ""
+        name: "Hypno",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/98.PNG",
         number: 98,
-        name: "",
-        type: ""
+        name: "Krabby",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/99.PNG",
         number: 99,
-        name: "",
-        type: ""
+        name: "Kingler",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/100.PNG",
         number: 100,
-        name: "",
-        type: ""
+        name: "Voltorb",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/101.PNG",
         number: 101,
-        name: "",
-        type: ""
+        name: "Electrode",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/102.PNG",
         number: 102,
-        name: "",
-        type: ""
+        name: "Exeggcute",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/103.PNG",
         number: 103,
-        name: "",
-        type: ""
+        name: "Exeggutor",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/104.PNG",
         number: 104,
-        name: "",
-        type: ""
+        name: "Cubone",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/105.PNG",
         number: 105,
-        name: "",
-        type: ""
+        name: "Marowak",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/106.PNG",
         number: 106,
-        name: "",
-        type: ""
+        name: "Hitmonlee",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/107.PNG",
         number: 107,
-        name: "",
-        type: ""
+        name: "Hitmonchan",
+        type: "fighting"
     },
     {
-        image: "images/-.PNG",
+        image: "images/108.PNG",
         number: 108,
-        name: "",
-        type: ""
+        name: "Lickitung",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/109.PNG",
         number: 109,
-        name: "",
-        type: ""
+        name: "Koffing",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/110.PNG",
         number: 110,
-        name: "",
-        type: ""
+        name: "Weezing",
+        type: "poison"
     },
     {
-        image: "images/-.PNG",
+        image: "images/111.PNG",
         number: 111,
-        name: "",
-        type: ""
+        name: "Rhyhorn",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/112.PNG",
         number: 112,
-        name: "",
-        type: ""
+        name: "Rhydon",
+        type: "ground"
     },
     {
-        image: "images/-.PNG",
+        image: "images/113.PNG",
         number: 113,
-        name: "",
-        type: ""
+        name: "Chansey",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/114.PNG",
         number: 114,
-        name: "",
-        type: ""
+        name: "Tangela",
+        type: "grass"
     },
     {
-        image: "images/-.PNG",
+        image: "images/115.PNG",
         number: 115,
-        name: "",
-        type: ""
+        name: "Kangaskhan",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/116.PNG",
         number: 116,
-        name: "",
-        type: ""
+        name: "Horsea",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/117.PNG",
         number: 117,
-        name: "",
-        type: ""
+        name: "Seadra",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/118.PNG",
         number: 118,
-        name: "",
-        type: ""
+        name: "Goldeen",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/119.PNG",
         number: 119,
-        name: "",
-        type: ""
+        name: "Seaking",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/120.PNG",
         number: 120,
-        name: "",
-        type: ""
+        name: "Staryu",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/121.PNG",
         number: 121,
-        name: "",
-        type: ""
+        name: "Starmie",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/122.PNG",
         number: 122,
-        name: "",
-        type: ""
+        name: "Mr. Mime",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/123.PNG",
         number: 123,
-        name: "",
-        type: ""
+        name: "Scyther",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/124.PNG",
         number: 124,
-        name: "",
-        type: ""
+        name: "Jynx",
+        type: "ice"
     },
     {
-        image: "images/-.PNG",
+        image: "images/125.PNG",
         number: 125,
-        name: "",
-        type: ""
+        name: "Electabuzz",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/126.PNG",
         number: 126,
-        name: "",
-        type: ""
+        name: "Magmar",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/127.PNG",
         number: 127,
-        name: "",
-        type: ""
+        name: "Pinser",
+        type: "bug"
     },
     {
-        image: "images/-.PNG",
+        image: "images/128.PNG",
         number: 128,
-        name: "",
-        type: ""
+        name: "Tauros",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/129.PNG",
         number: 129,
-        name: "",
-        type: ""
+        name: "Magikarp",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/130.PNG",
         number: 130,
-        name: "",
-        type: ""
+        name: "Gyarados",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/131.PNG",
         number: 131,
-        name: "",
-        type: ""
+        name: "Lapras",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/132.PNG",
         number: 132,
-        name: "",
-        type: ""
+        name: "Ditto",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/133.PNG",
         number: 133,
-        name: "",
-        type: ""
+        name: "Eevee",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/134.PNG",
         number: 134,
-        name: "",
-        type: ""
+        name: "Vaporeon",
+        type: "water"
     },
     {
-        image: "images/-.PNG",
+        image: "images/135.PNG",
         number: 135,
-        name: "",
-        type: ""
+        name: "Jolteon",
+        type: "electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/136.PNG",
         number: 136,
-        name: "",
-        type: ""
+        name: "Flareon",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/137.PNG",
         number: 137,
-        name: "",
-        type: ""
+        name: "Porygon",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/138.PNG",
         number: 138,
-        name: "",
-        type: ""
+        name: "Omanyte",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/139.PNG",
         number: 139,
-        name: "",
-        type: ""
+        name: "Omastar",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/140.PNG",
         number: 140,
-        name: "",
-        type: ""
+        name: "Kabuto",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/141.PNG",
         number: 141,
-        name: "",
-        type: ""
+        name: "Kabutops",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/142.PNG",
         number: 142,
-        name: "",
-        type: ""
+        name: "Aerodactyl",
+        type: "rock"
     },
     {
-        image: "images/-.PNG",
+        image: "images/143.PNG",
         number: 143,
-        name: "",
-        type: ""
+        name: "Snorlax",
+        type: "normal"
     },
     {
-        image: "images/-.PNG",
+        image: "images/144.PNG",
         number: 144,
-        name: "",
-        type: ""
+        name: "Articuno",
+        type: "ice"
     },
     {
-        image: "images/-.PNG",
+        image: "images/145.PNG",
         number: 145,
-        name: "",
-        type: ""
+        name: "Zapdos",
+        type: "Electric"
     },
     {
-        image: "images/-.PNG",
+        image: "images/146.PNG",
         number: 146,
-        name: "",
-        type: ""
+        name: "Moltres",
+        type: "fire"
     },
     {
-        image: "images/-.PNG",
+        image: "images/147.PNG",
         number: 147,
-        name: "",
-        type: ""
+        name: "Dratini",
+        type: "dragon"
     },
     {
-        image: "images/-.PNG",
+        image: "images/148.PNG",
         number: 148,
-        name: "",
-        type: ""
+        name: "Dragonair",
+        type: "dragon"
     },
     {
-        image: "images/-.PNG",
+        image: "images/149.PNG",
         number: 149,
-        name: "",
-        type: ""
+        name: "Dragonite",
+        type: "dragon"
     },
     {
-        image: "images/-.PNG",
+        image: "images/150.PNG",
         number: 150,
-        name: "",
-        type: ""
+        name: "Mewtwo",
+        type: "psychic"
     },
     {
-        image: "images/-.PNG",
+        image: "images/151.PNG",
         number: 151,
-        name: "",
-        type: ""
+        name: "Mew",
+        type: "psychic"
     }
 ];
