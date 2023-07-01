@@ -10,19 +10,19 @@
 
 - ### Placing an arch on my slogan
 [GeeksforGeeks.org](https://www.geeksforgeeks.org/how-to-create-a-curve-text-using-css3-canvas/)
-A lot of work for a little design.
 
 - ### Using JavaScript to navigate to another page within my app
 [Tabnine.com](https://www.tabnine.com/academy/javascript/how-to-redirect-url-javascript/)
-**Not working for some reason**
+
+**Not working for some reason-**
 Ended up making it a single page app, utilizing CSS to hide the "currently unnecessary page".
 
 - ### Getting a variable from one JavaScript file to another
-Using import/export statements is not working. Will probably have to utilize only one JavaScript file for entire app. Also had to incorporate my game onto the main page, "index.html" (difficulty getting data to transfer between pages. Ended up making a single page app).
+**Using import/export statements is not working.** Will probably have to utilize only one JavaScript file for entire app. Also had to incorporate my game onto the main page, "index.html" (difficulty getting data to transfer between pages. Ended up making a single page app).
 
 - ### Rounding up to the nearest number
 [W3Schools.com](https://www.w3schools.com/jsref/jsref_ceil.asp)
-The shuffle-cards algorithm I created that utilized this was redundant (shuffle had the same placement when shuffling same number of cards). Ended up not utilizing "Math.ceil" in this app.
+**The shuffle-cards algorithm I created that utilized this was redundant-** Shuffle had the same placement when shuffling same number of cards. Ended up not utilizing "Math.ceil" in this app.
 
 - ### Figuring out how to shuffle an array
 [JavaScript.info](https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle)
@@ -30,6 +30,9 @@ The shuffle-cards algorithm I created that utilized this was redundant (shuffle 
 - ### GitHub servers went down for more than a few minutes, making my app inoperable
 I need to collect all the Pokemon data and refactor my code to be able to allow my app to work without any outside dependencies.
 Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a Javascript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to  refactor but still considering it.
+
+- ### Having an issue getting the winner anouncements to show, consistently
+Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well...
 
 ---
 
