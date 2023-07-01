@@ -7,7 +7,7 @@ const roundCongrats = document.querySelector(".winners-announcement");
 const winnerName = document.querySelector(".winner-name");
 const tournamentCongrats = document.querySelector(".tournament-winners-announcement");
 const tournamentWinnerName = document.querySelector(".tournament-winner-name");
-let cardSetAmount;
+let cardSetAmount = 9; // NORMAL SETTINGS TOTAL AMOUNT OF MATCHES TO ATTAIN
 let cardSelection;
 
 
@@ -35,6 +35,12 @@ const player2 = {
     wins: document.querySelector(".player2-wins-amount"),
 };
 
+if (roundCongrats.classList.length === 1) {
+    roundCongrats.classList.toggle("hidden");
+};
+if (tournamentCongrats.classList.length === 1) {
+    tournamentCongrats.classList.toggle("hidden");
+};
 player1.player.classList.add("players-turn");
 
 const initializeScores = () => {
@@ -62,13 +68,11 @@ gamePage.classList = "hidden";
 
 // SIMPLE FUNCTION TO ALLOW PLAYERS TO RESET EVERYTHING AND RETURN TO SETTINGS PAGE
 const resetGame = () => {
-    if (roundCongrats.classList.length === 1) {
-        roundCongrats.classList.toggle("hidden");
+    if (parseInt(player1.wins.innerText)!=3 && parseInt(player1.wins.innerText)!=3) {
+        window.location = "index.html";
+    } else {
+        setTimeout(()=>window.location = "index.html", 8000);
     };
-    if (tournamentCongrats.classList.length === 1) {
-        tournamentCongrats.classList.toggle("hidden");
-    };
-    window.location = "index.html";
 };
 
 // SWITCH SCREENS TO ESCAPE (WHAT WAS SUPPOSED TO BE THE) MENU PAGE AND ENTER THE GAME PAGE
@@ -82,10 +86,9 @@ const startGame = () => {
     initializeCardTrackers();
 };
 
+
 // const cardSetAmount = 15; // WOULD BE NICE FOR A HARDER LEVEL IN THE FUTURE WHEN THE MINIMAL VIABLE PRODUCT IS COMPLETED
 const initializeGamePage = () => {
-    // NORMAL SETTINGS TOTAL AMOUNT OF MATCHES TO ATTAIN
-    cardSetAmount = 9;
     cardSelection = [];
 
     // PUSHING RANDOM NUMBERS TO GET DIFFERENT POKEMON EACH TIME WITH MINIMAL DUPLICATES
@@ -195,6 +198,12 @@ const createPokemonCard = (pokemon, id) => {
 
     // EVENT LISTENER FOR MATCH-CHECKING, SCORING/LOSE-TURN SITUATION AND (TRYING) TO UNFLIP MISMATCHED SELECTIONS
     pokemonEl.addEventListener("click", () => {
+        if (roundCongrats.classList.length === 1) {
+            roundCongrats.classList.toggle("hidden");
+        };
+        if (tournamentCongrats.classList.length === 1) {
+            tournamentCongrats.classList.toggle("hidden");
+        };
 
         // MAKING SURE THAT ALREADY FLIPPED CARDS ARE NOT ADDED TO THE LIST WHEN CLICKED
         if (pokemonEl.classList[1] !== "pokemon") {
@@ -233,19 +242,9 @@ const changeCurrentPlayerScore = () => {
         if (players[i].player.classList[2] === "players-turn") {
             players[i].score.innerText++;
         };
-
-        // ------******-----NEED TO TAKE THIS SECTION OUT OF THE IF STATEMENT AND SEE IF ANYTHING WILL WORK BETTER!------******----- //
-        // WINNER ANOUNCEMENT/ CHANGING OF WIN-TALLY/ RESET OF GAME
-        // if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) === 9) {
-        //     // console.log("WE HAVE A WINNER!");
-        //     changeCurrentPlayerWins();
-
-            // *****RESET GAME FUNCTION ONLY WORKS WHEN BOTH PLAYER'S SCORES === 9 IN THIS IF STATEMENT
-            // *****THE SETTIMEOUT FUNCTION IS NOT WORKING AT ALL IN THIS IF STATEMENT (INSTANTLY EXECUTES THE FUNCTION, WITHIN)
-            // setTimeout(resetGamePage(), 9000);
     };
-        if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) === 9) {
-            // console.log("WE HAVE A WINNER!");
+        if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) >= 9) {
+            // WINNER ANOUNCEMENT/ CHANGING OF WIN-TALLY/ RESET OF GAME
             changeCurrentPlayerWins();
         };
     };
@@ -256,24 +255,27 @@ const changeCurrentPlayerWins = () => {
         console.log("ADDING A WIN TO PLAYER 1");
         players[0].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
-        announceRoundWinner(players[0].name.innerHTML);
+        announceRoundWinner();
+        if (players[1].player.classList[2] === "players-turn") {
+            setTimeout(changeCurrentPlayer, 8000);
+        };
     } else if (parseInt(players[1].score.innerText)>parseInt(players[0].score.innerText)) {
         console.log("ADDING A WIN TO PLAYER 2");
         players[1].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
-        announceRoundWinner(players[1].name.innerHTML);
+        announceRoundWinner();
+        if (players[0].player.classList[2] === "players-turn") {
+            setTimeout(changeCurrentPlayer, 8000);
+        };
     };
-    if (parseInt(viewFlipped()[0].split(" ")[3]) >= 3) {
-        announceTournamentWinner(viewFlipped()[0].split(" ").slice(0,2).join(" "));
-        // setTimeout(resetGame(), 8000);
 
+    if (parseInt(viewFlipped()[0].split(" ")[3]) >= 3) {
+        announceTournamentWinner();
     } else if (parseInt(viewFlipped()[1].split(" ")[3]) >= 3) {
-        announceTournamentWinner(viewFlipped()[1].split(" ").slice(0,2).join(" "));
-        // setTimeout(resetGame(), 8000);
+        announceTournamentWinner();
     };
-    // setTimeout(resetGamePage(), 9000);
 };
-// console.log(viewFlipped()[0].split(" ").slice(0,2).join(" "));
+
 const resetGamePage = () => {
     if (roundCongrats.classList.length === 1) {
         roundCongrats.classList.toggle("hidden");
@@ -283,11 +285,12 @@ const resetGamePage = () => {
     };
     initializeScores();
     poke_container.innerHTML = "";
-    initializeGamePage();
     fetchPokemon();
 };
 
-const announceRoundWinner = (winner) => {
+const announceRoundWinner = () => {
+    console.log("roundCongrats.classList", roundCongrats.classList)
+    console.log("tournamentCongrats", tournamentCongrats.classList)
     if (roundCongrats.classList.length === 1) {
         roundCongrats.classList.toggle("hidden");
     };
@@ -304,18 +307,11 @@ const announceRoundWinner = (winner) => {
 
     console.log("announceRoundWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
     console.log("announceRoundWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
-    // *****SETTIMEOUT FUNCTION ISN'T WORKING WITHIN THIS FUNCTION, EITHER (INSTANTLY EXECUTES FUNCTION, WITHIN)
-    // setTimeout(resetGamePage(), 9000);
-    // setTimeout(roundCongrats.classList.toggle("hidden"), 10001);
+    setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500)
+    setTimeout(resetGamePage, 8000);
 };
 
-const announceTournamentWinner = (winner) => {
-    if (roundCongrats.classList.length === 1) {
-        roundCongrats.classList.toggle("hidden");
-    };
-    if (tournamentCongrats.classList.length === 1) {
-        tournamentCongrats.classList.toggle("hidden");
-    };
+const announceTournamentWinner = () => {
     if (player1.wins.innerText > player2.wins.innerText) {
         winner = player1.name.innerText;
     } else if (player1.wins.innerText < player2.wins.innerText) {
@@ -327,8 +323,9 @@ const announceTournamentWinner = (winner) => {
     console.log("announceTournamentWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
     console.log("announceTournamentWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
     // *****SETTIMEOUT FUNCTION ISN'T WORKING WITHIN THIS FUNCTION, EITHER (INSTANTLY EXECUTES FUNCTION, WITHIN)
-    // setTimeout(resetGame(), 18000);
+    setTimeout(resetGame, 8000);
 };
+// console.log(tournamentCongrats);
 // console.log("VIEWFLIPPED: ", viewFlipped());
 // console.log("VIEWFLIPPED PLAYER 1 SCORE: ", viewFlipped()[0].split(" ")[3]);
 // console.log("VIEWFLIPPED PLAYER 2 SCORE: ", viewFlipped()[1].split(" ")[3]);
