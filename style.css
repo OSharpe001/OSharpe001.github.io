@@ -19,7 +19,6 @@ body {
 .card-game {
     width: 100%;
     height: 70%;
-    /* border: 2px solid red; */
 }
 #poke-container {
     display: flex;
@@ -27,9 +26,7 @@ body {
     align-items: space-between;
     justify-content: center;
     margin: auto;
-    /* max-width: 1200px; */
     max-width: 75%;
-    /* border: 2px solid red; */
 }
 .pokemon {
     border-radius: 10px;
@@ -48,7 +45,6 @@ body {
     overflow: hidden;
 }
 .pokemon .image-container img {
-    /* height: 150px; */
     max-width: 90%;
     margin-top: 20px;
 }
@@ -77,10 +73,21 @@ button, form button{
     width: fit-content;
     border: none;
     background: transparent;
-    /* border: 2px solid red; */
 }
 #index-page, #game-page{
     text-align: center;
+}
+#startGame {
+    margin: 20vh auto;
+}
+.index-card {
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
 }
 .G {transform: translate(30px, 17px) rotate(-8deg);}
 .o {transform: translate(28px, 15px) rotate(-7deg);}
@@ -120,7 +127,6 @@ span{
     min-width: 300px;
     max-width: 500px;
     margin: 20px;
-    /* padding: 20px; */
     border: 1px solid black;
 }
 .players-turn {
@@ -162,7 +168,6 @@ span{
     height: 120px;
     text-align: center;
     display: none;
-    /* overflow: hidden; */
 }
 #face-down .image-container img {
     max-width: 90%;
@@ -221,25 +226,18 @@ span{
   @keyframes winners-announcement {
     0% {
         font-size: 5pt;
-        /* top: 38%; */
-        /* left: 30%; */
-        /* text-align: center; */
       }
       25% {
         font-size: 30pt;
-        /* text-align: center; */
       }
       50% {
         font-size: 60pt;
-        /* text-align: center; */
       }
       75% {
         font-size: 20pt;
-        /* text-align: center; */
       }
       100% {
         font-size: 70pt;
-        /* text-align: center; */
       }
   }
   .winner-name, .tournament-winner-name {

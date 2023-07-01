@@ -1,3 +1,14 @@
+const pikaSounds = [
+                    "pika_sounds/pika1.mp3",
+                    "pika_sounds/pika2.mp3",
+                    "pika_sounds/pika3.mp3",
+                    "pika_sounds/pika4.mp3",
+                    "pika_sounds/pika5.mp3",
+                    "pika_sounds/pika6.mp3",
+                    "pika_sounds/pika7.mp3",
+                    "pika_sounds/pika8.mp3"
+                ];
+const settingsPageCard = document.querySelector(".index-card");
 const playersSection = document.getElementById("players-section");
 const gamePage = document.getElementById("game-page");
 const indexPage = document.getElementById("index-page");
@@ -10,11 +21,27 @@ const tournamentWinnerName = document.querySelector(".tournament-winner-name");
 let cardSetAmount = 9; // NORMAL SETTINGS TOTAL AMOUNT OF MATCHES TO ATTAIN
 let cardSelection;
 
-
 // LIST THAT KEEP TRACK OF FLIPPED CARDS TO DICIPHER SCORING SITUATIONS AND FLIPPING BACK UNMATCHED CARDS (THOUGH IT'S NOT HELPING WITH THE LATTER, FOR SOME REASON)
 let flippedCardIdList;
 let flippedCards;
 let shuffledCards=[];
+
+// FLIP ABILITY AND RANDOM PIKACHU SOUND-BITES FOR START SCREEN CARD
+settingsPageCard.addEventListener("click", () => {
+    let sound = new Audio(pikaSounds[Math.floor(Math.random()*pikaSounds.length)]);
+
+    // MAKING SURE THAT THE CARD'S CLASS IS PROPER TO ENSURE CONSTANT FLIP ABILITY
+    if (settingsPageCard.classList[2]==="flip-down") {
+        settingsPageCard.classList.replace("flip-down", "flip-up")
+    } else {
+        settingsPageCard.classList.add("flip-up");
+    };
+
+    setTimeout(()=>settingsPageCard.id = "", 750);
+    setTimeout(()=>sound.play(), 350);
+    setTimeout(()=>settingsPageCard.classList.replace("flip-up", "flip-down"), 3000);
+    setTimeout(()=>settingsPageCard.id = "face-down", 3750);
+});
 
 // SAVE THE WINS INTO LOCAL STORAGE (GREAT FOR THE TOURNAMENT)
 const storeWins = (tally) => localStorage.setItem("Match Game Wins", JSON.stringify(tally));
@@ -41,6 +68,8 @@ if (roundCongrats.classList.length === 1) {
 if (tournamentCongrats.classList.length === 1) {
     tournamentCongrats.classList.toggle("hidden");
 };
+
+// INITIALIZING PLAYER 1 AS THE FIRST PLAYER WHEN STARTING TOURNAMENT
 player1.player.classList.add("players-turn");
 
 const initializeScores = () => {
@@ -252,7 +281,6 @@ const changeCurrentPlayerScore = () => {
 // FUNCTION TO CHANGE PLAYER'S "WINS"
 const changeCurrentPlayerWins = () => {
     if (parseInt(players[0].score.innerText)>parseInt(players[1].score.innerText)) {
-        console.log("ADDING A WIN TO PLAYER 1");
         players[0].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
         announceRoundWinner();
@@ -260,7 +288,6 @@ const changeCurrentPlayerWins = () => {
             setTimeout(changeCurrentPlayer, 8000);
         };
     } else if (parseInt(players[1].score.innerText)>parseInt(players[0].score.innerText)) {
-        console.log("ADDING A WIN TO PLAYER 2");
         players[1].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
         announceRoundWinner();
@@ -289,8 +316,8 @@ const resetGamePage = () => {
 };
 
 const announceRoundWinner = () => {
-    console.log("roundCongrats.classList", roundCongrats.classList)
-    console.log("tournamentCongrats", tournamentCongrats.classList)
+    console.log("BEGINNING OF ANNOUNCEROUNDWINNER roundCongrats.classList", roundCongrats.classList)
+    console.log("BEGINNING OF ANNOUNCEROUNDWINNER tournamentCongrats.classList", tournamentCongrats.classList)
     if (roundCongrats.classList.length === 1) {
         roundCongrats.classList.toggle("hidden");
     };
@@ -305,8 +332,8 @@ const announceRoundWinner = () => {
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
 
-    console.log("announceRoundWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
-    console.log("announceRoundWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
+    console.log("END OF ANNOUNCEROUNDWINNER roundCongrats.classList: ", roundCongrats.classList);
+    console.log("END OF ANNOUNCEROUNDWINNER tournamentCongrats.classList: ", tournamentCongrats.classList);
     setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500)
     setTimeout(resetGamePage, 8000);
 };
@@ -320,11 +347,11 @@ const announceTournamentWinner = () => {
     tournamentWinnerName.innerHTML = winner;
     tournamentCongrats.classList.toggle("hidden");
 
-    console.log("announceTournamentWinner's roundCongrats.classList.length: ", roundCongrats.classList.length);
-    console.log("announceTournamentWinner's tournamentCongrats.classList.length: ", tournamentCongrats.classList.length);
-    // *****SETTIMEOUT FUNCTION ISN'T WORKING WITHIN THIS FUNCTION, EITHER (INSTANTLY EXECUTES FUNCTION, WITHIN)
+    console.log("END OF ANNOUNCETOURNAMENTWINNER roundCongrats.classList: ", roundCongrats.classList);
+    console.log("END OF ANNOUNCETOURNAMENTWINNER tournamentCongrats.classList: ", tournamentCongrats.classList);
     setTimeout(resetGame, 8000);
 };
+
 // console.log(tournamentCongrats);
 // console.log("VIEWFLIPPED: ", viewFlipped());
 // console.log("VIEWFLIPPED PLAYER 1 SCORE: ", viewFlipped()[0].split(" ")[3]);

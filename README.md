@@ -22,27 +22,33 @@ Ended up making it a single page app, utilizing CSS to hide the "currently unnec
 
 - ### Rounding up to the nearest number
 [W3Schools.com](https://www.w3schools.com/jsref/jsref_ceil.asp)
-**The shuffle-cards algorithm I created that utilized this was redundant-** Shuffle had the same placement when shuffling same number of cards. Ended up not utilizing "Math.ceil" in this app.
 
 - ### Figuring out how to shuffle an array
 [JavaScript.info](https://javascript.info/task/shuffle#:~:text=Write%20the%20function%20shuffle)
 
 - ### GitHub servers went down for more than a few minutes, making my app inoperable
 I need to collect all the Pokemon data and refactor my code to be able to allow my app to work without any outside dependencies.
-Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a Javascript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to  refactor but still considering it.
+Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a JavaScript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to refactor but still considering it.
 
 - ### Having an issue getting the winner anouncements to show, consistently
 Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well...
+
+### Playing audio files in JavaScript
+[YouTube](https://www.youtube.com/watch?v=p4OHVJxd2FI)
+
+### Converting m4a files to mp3 format
+[YouTube](https://www.youtube.com/watch?v=bXVrr2XPRCQ&t=70s)
 
 ---
 
 ## Technologies Used
 
-- Currently, this app uses JavaScript's "async/await" method to gather new Pokemon info for each refresh **(subject to change)**
+- Currently, this app uses JavaScript's "async/await" method to gather new Pokemon info for each refresh. **(subject to change)**
 
-- Currently, this program utilizes info from a RESTful API, from [PokeAPI](https://pokeapi.co) **(subject to change)**
+- Currently, this program utilizes info from a RESTful API, from [PokeAPI](https://pokeapi.co). **(subject to change)**
+Also importing two Google fonts from [fonts.googleapis.com](https://fonts.googleapis.com/css?family=Oregano:300,400&display=swap) and [fonts.googleapis.com](https://fonts.googleapis.com/css?family=Sedgwick Ave:300,400&display=swap).
 
-- This app utilizes the client's local storage to keep track of (and retrieve) round-wins
+- This app utilizes the client's local storage to keep track of (and retrieve) round-wins.
 
 ---
 
@@ -72,7 +78,7 @@ Currently, only the first round's winner announcement appears. I've come to real
 
 9. As a user, I expect the winner of the prior round to go first in the current round.
 
-10. As a user, I expect that the first person to win three rounds will be declared the tournament winner. (NOT YET ACHIEVED)
+10. As a user, I expect that the first person to win three rounds will be announced as the tournament winner. (NOT YET ACHIEVED)
 
 11. As a user, after the tournament is completed, I expect the game to be reset to the first screen (Start Game Screen).
 
