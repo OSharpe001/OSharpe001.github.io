@@ -70,7 +70,7 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 
 5. As a user, after flipping over two cards, I expect to lose my turn to the other player if the two cards didn't match.
 
-6. As a user, I expect the computer to tally the points and announce a winner of the round, once all cards are matched. (NOT YET ACHIEVED)
+6. As a user, I expect the computer to tally the points and announce a winner of the round, once all cards are matched.
 
 7. As a user, once all cards are matched and the winner of the round is announced, I expect all the cards to be randomized and flipped face-down to begin the next round.
 
@@ -78,7 +78,7 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 
 9. As a user, I expect the winner of the prior round to go first in the current round.
 
-10. As a user, I expect that the first person to win three rounds will be announced as the tournament winner. (NOT YET ACHIEVED)
+10. As a user, I expect that the first person to win three rounds will be announced as the tournament winner.
 
 11. As a user, after the tournament is completed, I expect the game to be reset to the first screen (Start Game Screen).
 

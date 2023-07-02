@@ -14,6 +14,7 @@ const gamePage = document.getElementById("game-page");
 const indexPage = document.getElementById("index-page");
 const cardGame = document.querySelector(".card-game");
 const poke_container = document.querySelector("#poke-container");
+const cardsSection = document.querySelector(".cards");
 const roundCongrats = document.querySelector(".winners-announcement");
 const winnerName = document.querySelector(".winner-name");
 const tournamentCongrats = document.querySelector(".tournament-winners-announcement");
@@ -21,29 +22,30 @@ const tournamentWinnerName = document.querySelector(".tournament-winner-name");
 let cardSetAmount = 9; // NORMAL SETTINGS TOTAL AMOUNT OF MATCHES TO ATTAIN
 let cardSelection;
 
-// LIST THAT KEEP TRACK OF FLIPPED CARDS TO DICIPHER SCORING SITUATIONS AND FLIPPING BACK UNMATCHED CARDS (THOUGH IT'S NOT HELPING WITH THE LATTER, FOR SOME REASON)
+// LIST THAT KEEP TRACK OF FLIPPED CARDS TO DICIPHER SCORING SITUATIONS AND FLIPPING BACK UNMATCHED CARDS
 let flippedCardIdList;
 let flippedCards;
 let shuffledCards=[];
 
 // FLIP ABILITY AND RANDOM PIKACHU SOUND-BITES FOR START SCREEN CARD
 settingsPageCard.addEventListener("click", () => {
+
+    // GRAB A RANDOM PIKACHU SOUND-BITE FROM SELECTION
     let sound = new Audio(pikaSounds[Math.floor(Math.random()*pikaSounds.length)]);
 
     // MAKING SURE THAT THE CARD'S CLASS IS PROPER TO ENSURE CONSTANT FLIP ABILITY
     if (settingsPageCard.classList[2]==="flip-down") {
-        settingsPageCard.classList.replace("flip-down", "flip-up")
+        settingsPageCard.classList.replace("flip-down", "flip-up");
     } else {
         settingsPageCard.classList.add("flip-up");
     };
-
     setTimeout(()=>settingsPageCard.id = "", 750);
     setTimeout(()=>sound.play(), 350);
     setTimeout(()=>settingsPageCard.classList.replace("flip-up", "flip-down"), 3000);
     setTimeout(()=>settingsPageCard.id = "face-down", 3750);
 });
 
-// SAVE THE WINS INTO LOCAL STORAGE (GREAT FOR THE TOURNAMENT)
+// SAVE THE WINS INTO LOCAL STORAGE
 const storeWins = (tally) => localStorage.setItem("Match Game Wins", JSON.stringify(tally));
 const viewFlipped = () => JSON.parse(localStorage.getItem("Match Game Wins"));
 
@@ -60,13 +62,6 @@ const player2 = {
     name:document.querySelector(".player2-name"),
     score: document.querySelector(".player2-score-amount"),
     wins: document.querySelector(".player2-wins-amount"),
-};
-
-if (roundCongrats.classList.length === 1) {
-    roundCongrats.classList.toggle("hidden");
-};
-if (tournamentCongrats.classList.length === 1) {
-    tournamentCongrats.classList.toggle("hidden");
 };
 
 // INITIALIZING PLAYER 1 AS THE FIRST PLAYER WHEN STARTING TOURNAMENT
@@ -91,20 +86,15 @@ const initializeCardTrackers = () => {
     flippedCards = [];
 };
 
-
 // HIDING THE GAME PAGE SECTION UPON INITIALIZATION
 gamePage.classList = "hidden";
 
-// SIMPLE FUNCTION TO ALLOW PLAYERS TO RESET EVERYTHING AND RETURN TO SETTINGS PAGE
+// RESET FUNCTION TO ALLOW PLAYERS TO RESET EVERYTHING AND RETURN TO THE "START-GAME" PAGE
 const resetGame = () => {
-    if (parseInt(player1.wins.innerText)!=3 && parseInt(player1.wins.innerText)!=3) {
-        window.location = "index.html";
-    } else {
-        setTimeout(()=>window.location = "index.html", 8000);
-    };
+    window.location = "index.html";
 };
 
-// SWITCH SCREENS TO ESCAPE (WHAT WAS SUPPOSED TO BE THE) MENU PAGE AND ENTER THE GAME PAGE
+// SWITCH SCREENS TO ESCAPE THE "START-GAME" PAGE AND ENTER THE "GAME" PAGE
 const startGame = () => {
     gamePage.classList = "";
     indexPage.classList = "hidden";
@@ -115,8 +105,7 @@ const startGame = () => {
     initializeCardTrackers();
 };
 
-
-// const cardSetAmount = 15; // WOULD BE NICE FOR A HARDER LEVEL IN THE FUTURE WHEN THE MINIMAL VIABLE PRODUCT IS COMPLETED
+// const cardSetAmount = 15; // WOULD BE NICE FOR A HARDER LEVEL IN THE FUTURE
 const initializeGamePage = () => {
     cardSelection = [];
 
@@ -136,7 +125,7 @@ const initializeGamePage = () => {
         };
     };
 
-    // DOUBLING THE LIST, OVER
+    // DOUBLING THE LIST ITEMS
     cardSelection.push(...cardSelection);
 
     // CARD SHUFFLING ALGO
@@ -184,18 +173,24 @@ const getPokemon = async (id) => {
 // ALGO TO ANIMATE THE "FLIPPING FACE-UP" OF CARDS
 const flipCardUp = (element, num) => {
     element.className = `${num} flip-up`;
-    setTimeout(()=>{element.id = ""; element.className =`${num} pokemon`}, 750);
+    setTimeout(()=>{
+        element.id = "";
+        element.className =`${num} pokemon`;
+    }, 750);
 };
 
-// ALGO TO ANIMATE THE "FLIPPING FACE-DOWN" OF CARDS
+// ALGO TO FLIP CARDS FACE-DOWN
 const flipCardDown = (element, num) => {
-    setTimeout(()=>{element.id = "face-down"; element.className =`${num}`}, 750);
+    setTimeout(()=>{
+        element.id = "face-down";
+        element.className =`${num}`;
+    }, 750);
 };
 
 const createPokemonCard = (pokemon, id) => {
     const pokemonEl = document.createElement("div");
 
-    // ADDING THE ID TO THE CLASSNAME AS IN EASY IDENTIFIER (MATCH-CHECKING PURPOSES)
+    // ADDING THE ID TO THE CLASSNAME AS AN EASY IDENTIFIER (MATCH-CHECKING PURPOSES)
     pokemonEl.className = `${id}`;
 
     // INITIALIZING THE CARD AS "FACE-DOWN"
@@ -221,18 +216,11 @@ const createPokemonCard = (pokemon, id) => {
         </div>
     `;
 
-    // ORIGINAL POKEDEX CODE TO APPEND ALL INDIVIDUAL POKEMON CARDS TO THE DOM
     pokemonEl.innerHTML = pokemonInnerHTML;
-    poke_container.appendChild(pokemonEl);
+    cardsSection.appendChild(pokemonEl);
 
-    // EVENT LISTENER FOR MATCH-CHECKING, SCORING/LOSE-TURN SITUATION AND (TRYING) TO UNFLIP MISMATCHED SELECTIONS
+    // EVENT LISTENER FOR MATCH-CHECKING, SCORING/LOSE-TURN SITUATION AND TO UNFLIP MISMATCHED CARD SELECTIONS
     pokemonEl.addEventListener("click", () => {
-        if (roundCongrats.classList.length === 1) {
-            roundCongrats.classList.toggle("hidden");
-        };
-        if (tournamentCongrats.classList.length === 1) {
-            tournamentCongrats.classList.toggle("hidden");
-        };
 
         // MAKING SURE THAT ALREADY FLIPPED CARDS ARE NOT ADDED TO THE LIST WHEN CLICKED
         if (pokemonEl.classList[1] !== "pokemon") {
@@ -247,15 +235,16 @@ const createPokemonCard = (pokemon, id) => {
         } else if (flippedCards.length === 2 && flippedCardIdList[0] !== flippedCardIdList[1]) {
 
             // FUNCTION TO AUTOMATICALLY FLIP BACK UNMATCHED CARDS
-            ()=>{flippedCards[0].classList.replace("pokemon", "flip-down");flippedCards[1].classList.replace("pokemon", "flip-down");}
+            ()=>{
+                flippedCards[0].classList.replace("pokemon", "flip-down");
+                flippedCards[1].classList.replace("pokemon", "flip-down");
+            };
             setTimeout(() => {flipCardDown(flippedCards[0], id);flipCardDown(flippedCards[1], id)}, 1000);
             setTimeout(()=>{flippedCards = [];flippedCardIdList = [];changeCurrentPlayer();}, 2000);
         };
     });
 };
 fetchPokemon();
-
-// ----------------------------------------------------
 
 const players = [player1, player2];
 
@@ -273,7 +262,8 @@ const changeCurrentPlayerScore = () => {
         };
     };
         if ((parseInt(players[0].score.innerText) + parseInt(players[1].score.innerText)) >= 9) {
-            // WINNER ANOUNCEMENT/ CHANGING OF WIN-TALLY/ RESET OF GAME
+
+            // WINNER ANOUNCEMENT/ CHANGING OF WIN-TALLY/ RESET OF GAME-PAGE
             changeCurrentPlayerWins();
         };
     };
@@ -283,47 +273,44 @@ const changeCurrentPlayerWins = () => {
     if (parseInt(players[0].score.innerText)>parseInt(players[1].score.innerText)) {
         players[0].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
+
+        // MAKING SURE THE ROUND-WINNER ANNOUNCEMENT DOESN'T PLAY AT THE END OF THE TOURNAMENT
+        if (player1.wins.innerHTML < 3) {
         announceRoundWinner();
+        };
+
+        // MAKES SURE THE CURRENT ROUND'S WINNER PLAYS FIRST, NEXT ROUND
         if (players[1].player.classList[2] === "players-turn") {
             setTimeout(changeCurrentPlayer, 8000);
         };
     } else if (parseInt(players[1].score.innerText)>parseInt(players[0].score.innerText)) {
         players[1].wins.innerText++;
         storeWins([`Player 1 - ${player1.wins.innerHTML}`,`Player 2 - ${player2.wins.innerHTML}`]);
+
+        // MAKING SURE THE ROUND-WINNER ANNOUNCEMENT DOESN'T PLAY AT THE END OF THE TOURNAMENT
+        if (player2.wins.innerHTML < 3) {
         announceRoundWinner();
+        };
+
+        // MAKES SURE THE CURRENT ROUND'S WINNER PLAYS FIRST, NEXT ROUND
         if (players[0].player.classList[2] === "players-turn") {
             setTimeout(changeCurrentPlayer, 8000);
         };
     };
 
-    if (parseInt(viewFlipped()[0].split(" ")[3]) >= 3) {
-        announceTournamentWinner();
-    } else if (parseInt(viewFlipped()[1].split(" ")[3]) >= 3) {
+    if (parseInt(viewFlipped()[0].split(" ")[3]) >= 3 || parseInt(viewFlipped()[1].split(" ")[3]) >= 3) {
         announceTournamentWinner();
     };
 };
 
 const resetGamePage = () => {
-    if (roundCongrats.classList.length === 1) {
-        roundCongrats.classList.toggle("hidden");
-    };
-    if (tournamentCongrats.classList.length === 1) {
-        tournamentCongrats.classList.toggle("hidden");
-    };
     initializeScores();
-    poke_container.innerHTML = "";
+    cardsSection.innerHTML = "";
+    initializeGamePage();
     fetchPokemon();
 };
 
 const announceRoundWinner = () => {
-    console.log("BEGINNING OF ANNOUNCEROUNDWINNER roundCongrats.classList", roundCongrats.classList)
-    console.log("BEGINNING OF ANNOUNCEROUNDWINNER tournamentCongrats.classList", tournamentCongrats.classList)
-    if (roundCongrats.classList.length === 1) {
-        roundCongrats.classList.toggle("hidden");
-    };
-    if (tournamentCongrats.classList.length === 1) {
-        tournamentCongrats.classList.toggle("hidden");
-    };
     if (player1.score.innerText > player2.score.innerText) {
         winner = player1.name.innerText;
     } else if (player1.score.innerText < player2.score.innerText) {
@@ -332,9 +319,7 @@ const announceRoundWinner = () => {
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
 
-    console.log("END OF ANNOUNCEROUNDWINNER roundCongrats.classList: ", roundCongrats.classList);
-    console.log("END OF ANNOUNCEROUNDWINNER tournamentCongrats.classList: ", tournamentCongrats.classList);
-    setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500)
+    setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500);
     setTimeout(resetGamePage, 8000);
 };
 
@@ -347,27 +332,5 @@ const announceTournamentWinner = () => {
     tournamentWinnerName.innerHTML = winner;
     tournamentCongrats.classList.toggle("hidden");
 
-    console.log("END OF ANNOUNCETOURNAMENTWINNER roundCongrats.classList: ", roundCongrats.classList);
-    console.log("END OF ANNOUNCETOURNAMENTWINNER tournamentCongrats.classList: ", tournamentCongrats.classList);
-    setTimeout(resetGame, 8000);
+    setTimeout(resetGame, 7000);
 };
-
-// console.log(tournamentCongrats);
-// console.log("VIEWFLIPPED: ", viewFlipped());
-// console.log("VIEWFLIPPED PLAYER 1 SCORE: ", viewFlipped()[0].split(" ")[3]);
-// console.log("VIEWFLIPPED PLAYER 2 SCORE: ", viewFlipped()[1].split(" ")[3]);
-// const cards = document.querySelector(".poke-container").innerHTML;
-// console.log("CARDS SECTION: ", cards);
-
-// console.log(players);
-// console.log("PLAYER1: ", player1);
-// console.log("PLAYER1: ", player2);
-// console.log("player1.classList", player1.classList);
-// console.log("PLAYER1: ", player1.name.innerText);
-// console.log("PLAYER1: ", player2);
-// console.log("player1.classList[2]", player1.classList[2]);
-// console.log("playersSection", playersSection);
-// console.log("gamePage", gamePage);
-// console.log("poke_container", poke_container);
-// console.log("cardSelection", cardSelection);
-// console.log("shuffledCards", shuffledCards);
