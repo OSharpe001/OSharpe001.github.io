@@ -31,7 +31,7 @@ I need to collect all the Pokemon data and refactor my code to be able to allow 
 Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a JavaScript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to refactor but still considering it.
 
 - ### Having an issue getting the winner anouncements to show, consistently
-Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well...
+Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well... (SOLVED!)
 
 ### Playing audio files in JavaScript
 [YouTube](https://www.youtube.com/watch?v=p4OHVJxd2FI)
