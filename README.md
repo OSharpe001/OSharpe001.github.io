@@ -31,7 +31,9 @@ I need to collect all the Pokemon data and refactor my code to be able to allow 
 Spent a lot of time gathering Pokemon pictures from the web, cleaning the images and making a JavaScript file to represent each picture and associated info. Did not utilize this, as yet, since it will take a decent amount of time to refactor but still considering it.
 
 - ### Having an issue getting the winner anouncements to show, consistently
-Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well... (SOLVED!)
+Currently, only the first round's winner announcement appears. I've come to realize that calling the fetchPokemon function (used to initialize the face-down cards, on screen) is what stops subseqent round winner announcements and the tournament winner announcement from displaying. I don't understand why, though, especially since I've tried placing a reset for these announcements within the fetchPokemon function, as well...
+
+-- (SOLVED!) I had the hidden winner announcements hard-coded into the html in the game page. When the game page resets, I was effectively erasing the hard coded "winner announcements". Created another div to wrap the game page and set the announcements as siblings to the game page.
 
 ### Playing audio files in JavaScript
 [YouTube](https://www.youtube.com/watch?v=p4OHVJxd2FI)
@@ -66,9 +68,9 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 
 3. As a user, when I select a card, I expect it to flip over to reveal the face.
 
-4. As a user, after flipping over two cards, I expect to gain a point if the two cards match and gain another turn.
+4. As a user, after flipping over two cards, I expect an audible signal and to gain a point if the two cards match. I also expect to gain another turn.
 
-5. As a user, after flipping over two cards, I expect to lose my turn to the other player if the two cards didn't match.
+5. As a user, after flipping over two cards, I expect an audible signal and to lose my turn to the other player if the two cards didn't match.
 
 6. As a user, I expect the computer to tally the points and announce a winner of the round, once all cards are matched.
 
@@ -90,14 +92,12 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 
 ## Stretch Goals
 
-1. **Mobile responsive design**
+1. **Redesign the "Start Game Page" to include a menu that includes a single-round option.**
 
-2. **Redesign the "Start Game Page" to include a menu that includes a single-round option.**
+2. **Redesign the "Start Game Page" to include a menu that has a name input ability to personalize the player's score box.**
 
-3. **Redesign the "Start Game Page" to include a menu that has a name input ability to personalize the player's score box.**
+3. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock".**
 
-4. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock".**
+4. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a "best of nine" mode where a player has to have 5 round-wins to win the tournament.**
 
-5. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a "best of nine" mode where a player has to have 5 round-wins to win the tournament.**
-
-6. **Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be increased for more difficult levels).**
+5. **Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be increased for more difficult levels).**

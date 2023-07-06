@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     height: 100%;
     background: radial-gradient(#c0eaf1, #daadee);
@@ -16,26 +17,31 @@ body {
     justify-content: center;
     margin: 0;
 }
+
 .card-game {
     width: 100%;
     height: 70%;
+    margin-bottom: 30px;
 }
+
 #poke-container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: space-between;
     justify-content: center;
     margin: auto;
     max-width: 75%;
 }
+
 .cards {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: space-between;
     justify-content: center;
     margin: auto;
     max-width: 100%;
 }
+
 .pokemon {
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, .5);
@@ -44,6 +50,7 @@ body {
     text-align: center;
     background-color: #FCF7DE;
 }
+
 .pokemon .image-container {
     background-color: rgba(255, 255, 255, .6);
     border-radius: 50%;
@@ -52,20 +59,25 @@ body {
     text-align: center;
     overflow: hidden;
 }
+
 .pokemon .image-container img {
     max-width: 90%;
     margin-top: 20px;
 }
+
 h2 {
     margin: 10px auto 20px;
 }
+
 .slogan {
     font-family: 'Sedgwick Ave';
     font-size: 30pt;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke-color: rgb(40, 103, 249);
     -webkit-text-stroke-width: 2.5px;
+    margin-bottom: 30px;
 }
+
 button, form button{
     width: 9ch;
     font-size: 12pt;
@@ -75,6 +87,7 @@ button, form button{
     border-radius: 16px;
     margin: 10px;
 }
+
 .reset {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -82,44 +95,91 @@ button, form button{
     border: none;
     background: transparent;
 }
-#index-page, #game-page{
+
+#index-page, #game-page {
     text-align: center;
 }
+
 #startGame {
     margin: 20vh auto;
 }
-.index-card {
-    justify-content: center;
-    justify-self: center;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
+
+.G {
+    transform: translate(30px, 17px) rotate(-8deg);
 }
-.G {transform: translate(30px, 17px) rotate(-8deg);}
-.o {transform: translate(28px, 15px) rotate(-7deg);}
-.t1 {transform: translate(25px, 13px) rotate(-6deg);}
-.t2 {transform: translate(20px, 10px) rotate(-5deg);}
-.a1 {transform: translate(16px, 8px) rotate(-4deg);}
-.m1 {transform: translate(10px, 6px) rotate(-3deg);}
-.a2 {transform: translate(8px, 3px) rotate(-2deg);}
-.t3 {transform: translate(5px, 2px) rotate(-1deg);}
-.c {transform: translate(0px, 0px) rotate(0deg);}
-.h {transform: translate(-05px, 1px) rotate(1deg);}
-.apos {transform: translate(-10px, 3px) rotate(25deg);}
-.e {transform: translate(-14px, 2px) rotate(3deg);}
-.m2 {transform: translate(-17px, 4px) rotate(6deg);}
-.a3 {transform: translate(-25px, 10px) rotate(5deg);}
-.l1 {transform: translate(-27px, 13px) rotate(6deg);}
-.l2 {transform: translate(-29px, 15px) rotate(7deg);}
-.excl {transform: translate(-32px, 17px) rotate(6deg);}
+
+.o {
+    transform: translate(28px, 15px) rotate(-7deg);
+}
+
+.t1 {
+    transform: translate(25px, 13px) rotate(-6deg);
+}
+
+.t2 {
+    transform: translate(20px, 10px) rotate(-5deg);
+}
+
+.a1 {
+    transform: translate(16px, 8px) rotate(-4deg);
+}
+
+.m1 {
+    transform: translate(10px, 6px) rotate(-3deg);
+}
+
+.a2 {
+    transform: translate(8px, 3px) rotate(-2deg);
+}
+
+.t3 {
+    transform: translate(5px, 2px) rotate(-1deg);
+}
+
+.c {
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.h {
+    transform: translate(-05px, 1px) rotate(1deg);
+}
+
+.apos {
+    transform: translate(-10px, 3px) rotate(25deg);
+}
+
+.e {
+    transform: translate(-14px, 2px) rotate(3deg);
+}
+
+.m2 {
+    transform: translate(-17px, 4px) rotate(6deg);
+}
+
+.a3 {
+    transform: translate(-25px, 10px) rotate(5deg);
+}
+
+.l1 {
+    transform: translate(-27px, 13px) rotate(6deg);
+}
+
+.l2 {
+    transform: translate(-29px, 15px) rotate(7deg);
+}
+
+.excl {
+    transform: translate(-32px, 17px) rotate(6deg);
+}
+
 span{
     display: inline-block;
 }
+
 .hidden {
     display: none;
 }
+
 #players-section {
     font-size: 16pt;
     width: 100%;
@@ -129,6 +189,7 @@ span{
     justify-content: space-between;
     border: 10px ridge blue;
 }
+
 .player {
     text-align: center;
     height: 100%;
@@ -137,21 +198,26 @@ span{
     margin: 20px;
     border: 1px solid black;
 }
+
 .players-turn {
     background-color: #c7eead;
 }
+
 .player1-name, .player2-name {
     text-decoration: underline;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke-color: rgb(40, 103, 249);
     -webkit-text-stroke-width: 1.5px;
 }
+
 .player1-score, .player1-wins, .player2-score, .player2-wins {
     border: 2px solid blue;
 }
+
 .player1 .player1-score, .player1-wins {
     border-right: 1px solid blue;
 }
+
 .player2 .player2-score, .player2-wins {
     border-left: 1px solid blue;
 }
@@ -164,11 +230,13 @@ span{
     margin: 10px;
     padding: 20px;
     text-align: center;
-    background:linear-gradient(to right,#fae475, #c7eead)
+    background:linear-gradient(to right,#fae475, #c7eead);
 }
+
 #face-down:hover {
     box-shadow: 2px 2px 35px rgb(40, 103, 249);
 }
+
 #face-down .image-container {
     background-color: rgba(255, 255, 255, .6);
     border-radius: 50%;
@@ -177,6 +245,7 @@ span{
     text-align: center;
     display: none;
 }
+
 #face-down .image-container img {
     max-width: 90%;
     margin-top: 20px;
@@ -189,35 +258,39 @@ span{
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
+
 @keyframes flip-up {
     0% {
         transform: rotateY(0);
-      }
-      50% {
+    }
+    50% {
         transform: rotateY(0);
-      }
-      100% {
+    }
+    100% {
         transform: rotateY(180deg);
-      }
-  }
+    }
+}
+
 .flip-down{
     animation-name: flip-down;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
+
 @keyframes flip-down {
     0% {
         transform: rotateY(0);
-      }
-      50% {
+    }
+    50% {
         transform: rotateY(0);
-      }
-      100% {
+    }
+    100% {
         transform: rotateY(-180deg);
-      }
-  }
-  .winners-announcement, .tournament-winners-announcement {
+    }
+}
+
+.winners-announcement, .tournament-winners-announcement {
     position: absolute;
     text-align: center;
     align-self: center;
@@ -230,24 +303,276 @@ span{
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-  }
-  @keyframes winners-announcement {
+}
+
+@keyframes winners-announcement {
     0% {
         font-size: 5pt;
-      }
-      25% {
+    }
+    25% {
         font-size: 30pt;
-      }
-      50% {
+    }
+    50% {
         font-size: 60pt;
-      }
-      75% {
+    }
+    75% {
         font-size: 20pt;
-      }
-      100% {
+    }
+    100% {
         font-size: 70pt;
-      }
-  }
-  .winner-name, .tournament-winner-name {
+    }
+}
+
+.winner-name, .tournament-winner-name {
     text-decoration: underline;
-  }
+}
+
+@media (max-width: 1000px) {
+    .slogan {
+        font-size: 23pt;
+        margin-bottom: 30px;
+    }
+
+    #game-page {
+        width: 100%;
+    }
+
+    .card-game {
+        width: 100vw;
+    }
+
+    #poke-container {
+        max-width: 100%;
+    }
+
+    #face-down {
+        width: 110px;
+        height: 110px;
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .pokemon {
+        width: 110px;
+        height: 110px;
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .pokemon .image-container {
+        width: 90px;
+        height: 90px;
+    }
+
+    .pokemon .image-container img {
+        max-width: 110%;
+        margin: -4% auto auto -2%;
+    }
+
+    #players-section {
+        font-size: 12pt;
+        padding: 2px;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 10px;
+    }
+
+    .player {
+        min-width: 45%;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 750px) {
+    .reset {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .slogan {
+        font-size: 20pt;
+        margin: 0px;
+    }
+
+    .cards {
+        width: 75%;
+    }
+
+    #face-down {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pokemon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pokemon .image-container {
+        width: 64px;
+        height: 64px;
+    }
+
+    #players-section {
+        padding: 0;
+        bottom: 0px;
+    }
+
+    .player {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .reset {
+        margin: 0 0 5px;
+    }
+
+    .cards {
+        width: 80%;
+    }
+
+    #face-down {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pokemon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pokemon .image-container {
+        width: 54px;
+        height: 54px;
+    }
+
+    #players-section {
+        border: 7px ridge blue;
+    }
+}
+
+@media (max-width: 450px) {
+    .reset {
+        margin: 10px auto;
+        padding: 5px auto 0;
+    }
+
+    .slogan {
+        font-size: 20pt;
+        margin: 0 0 10px;
+        font-size: 30pt;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    #face-down {
+        width: 81px;
+        height: 81px;
+    }
+
+    .pokemon {
+        width: 81px;
+        height: 81px;
+    }
+
+    .pokemon .image-container {
+        width: 65px;
+        height: 65px;
+    }
+
+    #players-section {
+        bottom: 10px;
+    }
+
+    .player {
+        min-width: 45%;
+        margin: 5px;
+    }
+
+    #players-section {
+        border: 10px ridge blue;
+    }
+}
+
+@media (max-height: 350px) {
+    .reset {
+        padding: 0;
+        margin: 10px auto;
+    }
+
+    .slogan {
+        font-size: 25pt;
+        margin: 5px auto 10px;
+    }
+
+    .cards {
+        min-width: 100%;
+    }
+
+    #face-down {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pokemon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .pokemon .image-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player {
+        margin: 2px;
+    }
+
+    #players-section {
+        padding: 2px;
+        bottom: 0;
+        border: 10px ridge blue;
+    }
+}
+
+@media (max-width: 350px) {
+    .reset {
+        padding: 0;
+        margin: 10px auto;
+    }
+
+    .slogan {
+        font-size: 25pt;
+        margin: 5px auto 10px;
+    }
+
+    #face-down {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pokemon {
+        width: 70px;
+        height: 70px;
+        padding: 5px;
+    }
+
+    .pokemon .image-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .player {
+        margin: 2px;
+    }
+
+    #players-section {
+        padding: 2px;
+        bottom: 0;
+        border: 7px ridge blue;
+    }
+}
