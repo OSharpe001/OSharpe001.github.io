@@ -455,12 +455,13 @@ span{
 
 @media (max-width: 450px) {
     .reset {
-        margin: 10px auto;
-        padding: 5px auto 0;
-        border: 2px solid green;
+        margin: 10px 0;
+        padding: 5px 0 0;
+        border: 2px solid beige;
     }
 
     .slogan {
+        width: fit-content;
         font-size: 19pt;
         margin: 0 0 10px;
         padding: 0;
