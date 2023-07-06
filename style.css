@@ -456,7 +456,7 @@ span{
     .reset {
         margin: 5px auto;
         padding: 5px auto 0;
-        border: 2px solid aliceblue;
+        border: 2px solid blue;
     }
 
     .slogan {
@@ -469,18 +469,18 @@ span{
     }
 
     #face-down {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .pokemon {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .pokemon .image-container {
-        width: 60px;
-        height: 60px;
+        width: 48px;
+        height: 48px;
     }
 
     #players-section {
