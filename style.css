@@ -426,7 +426,6 @@ span{
 @media (max-width: 700px) {
     .reset {
         margin: 0 0 5px;
-        border: 2px solid green;
     }
 
     .cards {
@@ -457,11 +456,11 @@ span{
     .reset {
         margin: 10px auto;
         padding: 5px auto 0;
-        border: 2px solid aliceblue;
+        /* border: 2px solid aliceblue; */
     }
 
     .slogan {
-        font-size: 25pt;
+        font-size: 27pt;
         margin: 0 0 10px;
     }
 
