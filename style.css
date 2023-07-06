@@ -455,17 +455,24 @@ span{
 @media (max-width: 450px) {
     .reset {
         margin: 5px auto;
-        padding: 5px auto 0;
-        border: 2px solid blue;
+        padding: 5px auto;
     }
 
     .slogan {
         font-size: 28pt;
-        margin: 0 0 5px;
+        margin: 5px 0 5px;
     }
 
     .cards {
         width: 100%;
+    }
+
+    button + #face-down {
+        margin: 5px auto;
+    }
+
+    button + .pokemon {
+        margin: 5px auto;
     }
 
     #face-down {
