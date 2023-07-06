@@ -543,6 +543,7 @@ span{
     .reset {
         padding: 0;
         margin: 10px auto;
+        border: 2px solid red;
     }
 
     .slogan {
