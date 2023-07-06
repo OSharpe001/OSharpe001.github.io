@@ -1,3 +1,4 @@
+// SOUNDS SECTIION
 const pikaSounds = [
                     "pika_sounds/pika1.mp3",
                     "pika_sounds/pika2.mp3",
@@ -8,6 +9,16 @@ const pikaSounds = [
                     "pika_sounds/pika7.mp3",
                     "pika_sounds/pika8.mp3"
                 ];
+const cheering = [
+                    "game_sounds/cheering_crowd.mp3",
+                    "game_sounds/cheering_kids.mp3",
+                ];
+const shortApplause = new Audio("game_sounds/2sec_applause.mp3");
+const longApplause = new Audio("game_sounds/applause.mp3");
+const sad = new Audio("game_sounds/aww.mp3");
+const correctBell = new Audio("game_sounds/bell.mp3");
+const wrongBuzzer = new Audio("game_sounds/buzzer.mp3");
+
 const settingsPageCard = document.querySelector(".index-card");
 const playersSection = document.getElementById("players-section");
 const gamePage = document.getElementById("game-page");
@@ -31,16 +42,16 @@ let shuffledCards=[];
 settingsPageCard.addEventListener("click", () => {
 
     // GRAB A RANDOM PIKACHU SOUND-BITE FROM SELECTION
-    let sound = new Audio(pikaSounds[Math.floor(Math.random()*pikaSounds.length)]);
+    let pikaSound = new Audio(pikaSounds[Math.floor(Math.random()*pikaSounds.length)]);
 
-    // MAKING SURE THAT THE CARD'S CLASS IS PROPER TO ENSURE CONSTANT FLIP ABILITY
+    // MAKING SURE THAT THE STARTING PAGE CARD'S CLASS IS PROPER TO ENSURE CONSTANT FLIP ABILITY
     if (settingsPageCard.classList[2]==="flip-down") {
         settingsPageCard.classList.replace("flip-down", "flip-up");
     } else {
         settingsPageCard.classList.add("flip-up");
     };
     setTimeout(()=>settingsPageCard.id = "", 750);
-    setTimeout(()=>sound.play(), 350);
+    setTimeout(()=>pikaSound.play(), 350);
     setTimeout(()=>settingsPageCard.classList.replace("flip-up", "flip-down"), 3000);
     setTimeout(()=>settingsPageCard.id = "face-down", 3750);
 });
@@ -222,7 +233,7 @@ const createPokemonCard = (pokemon, id) => {
     // EVENT LISTENER FOR MATCH-CHECKING, SCORING/LOSE-TURN SITUATION AND TO UNFLIP MISMATCHED CARD SELECTIONS
     pokemonEl.addEventListener("click", () => {
 
-        // MAKING SURE THAT ALREADY FLIPPED CARDS ARE NOT ADDED TO THE LIST WHEN CLICKED
+        // MAKING SURE THAT ALREADY FLIPPED CARDS ARE NOT ADDED TO THE LIST WHEN CLICKED AGAIN
         if (pokemonEl.classList[1] !== "pokemon") {
             flippedCardIdList.push(pokemonEl.classList[0]);
             flippedCards.push(pokemonEl);
@@ -232,6 +243,7 @@ const createPokemonCard = (pokemon, id) => {
             flippedCards = [];
             flippedCardIdList = [];
             changeCurrentPlayerScore();
+            setTimeout(()=>correctBell.play(), 350);
         } else if (flippedCards.length === 2 && flippedCardIdList[0] !== flippedCardIdList[1]) {
 
             // FUNCTION TO AUTOMATICALLY FLIP BACK UNMATCHED CARDS
@@ -241,6 +253,7 @@ const createPokemonCard = (pokemon, id) => {
             };
             setTimeout(() => {flipCardDown(flippedCards[0], id);flipCardDown(flippedCards[1], id)}, 1000);
             setTimeout(()=>{flippedCards = [];flippedCardIdList = [];changeCurrentPlayer();}, 2000);
+            setTimeout(()=>wrongBuzzer.play(), 1250);
         };
     });
 };
@@ -318,12 +331,14 @@ const announceRoundWinner = () => {
     };
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
+    shortApplause.play();
 
     setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500);
     setTimeout(resetGamePage, 8000);
 };
 
 const announceTournamentWinner = () => {
+    let cheeringSound = new Audio(cheering[Math.floor(Math.random()*cheering.length)]);
     if (player1.wins.innerText > player2.wins.innerText) {
         winner = player1.name.innerText;
     } else if (player1.wins.innerText < player2.wins.innerText) {
@@ -331,6 +346,8 @@ const announceTournamentWinner = () => {
     };
     tournamentWinnerName.innerHTML = winner;
     tournamentCongrats.classList.toggle("hidden");
+    longApplause.play();
+    cheeringSound.play();
 
     setTimeout(resetGame, 7000);
 };
