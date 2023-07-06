@@ -426,6 +426,7 @@ span{
 @media (max-width: 700px) {
     .reset {
         margin: 0 0 5px;
+        border: 2px solid green;
     }
 
     .cards {
