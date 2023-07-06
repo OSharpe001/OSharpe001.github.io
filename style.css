@@ -454,14 +454,14 @@ span{
 
 @media (max-width: 450px) {
     .reset {
-        margin: 10px auto;
+        margin: 5px auto;
         padding: 5px auto 0;
-        /* border: 2px solid aliceblue; */
+        border: 2px solid aliceblue;
     }
 
     .slogan {
-        font-size: 27pt;
-        margin: 0 0 10px;
+        font-size: 28pt;
+        margin: 0 0 5px;
     }
 
     .cards {
@@ -469,18 +469,18 @@ span{
     }
 
     #face-down {
-        width: 81px;
-        height: 81px;
+        width: 70px;
+        height: 70px;
     }
 
     .pokemon {
-        width: 81px;
-        height: 81px;
+        width: 70px;
+        height: 70px;
     }
 
     .pokemon .image-container {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
     }
 
     #players-section {
