@@ -24,6 +24,10 @@ body {
     margin-bottom: 30px;
 }
 
+#index-page .index-card {
+    margin: 20px auto;
+}
+
 #poke-container {
     display: flex;
     flex-wrap: wrap;
@@ -78,14 +82,22 @@ h2 {
     margin-bottom: 30px;
 }
 
-button, form button{
-    width: 9ch;
+button, form button, .button {
+    width: max-content;
     font-size: 12pt;
     font-weight: bold;
+    font-family: sans-serif;
     background-color: #c0eaf1;
     padding: 4px 8px;
     border-radius: 16px;
     margin: 10px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
 }
 
 .reset {
@@ -101,7 +113,7 @@ button, form button{
 }
 
 #startGame {
-    margin: 20vh auto;
+    margin: 20vh auto 10vh;
 }
 
 .G {
