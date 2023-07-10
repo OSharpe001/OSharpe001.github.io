@@ -137,7 +137,7 @@ input {
 
 .slogan {
     font-family: 'Sedgwick Ave';
-    font-size: 30pt;
+    font-size: 25pt;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke-color: rgb(40, 103, 249);
     -webkit-text-stroke-width: 2.5px;
@@ -530,7 +530,7 @@ span {
     }
 
     .slogan {
-        font-size: 18pt;
+        font-size: 20pt;
         margin: 0 0 10px;
         padding: 0;
         font-size: 30pt;
@@ -561,6 +561,7 @@ span {
     }
 
     #players-section {
+        position: static;
         bottom: 10px;
     }
 
@@ -606,14 +607,13 @@ span {
 
 @media (max-width: 380px) {
     .reset {
-        margin: 10px auto;
+        margin: 10px auto 0;
         padding: 5px auto 0;
     }
 
     .slogan {
-        font-size: 20pt;
-        margin: 0 0 10px;
-        font-size: 30pt;
+        font-size: 25pt;
+        margin: 0 0 5px;
     }
 
     #sound-options {
