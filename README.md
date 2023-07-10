@@ -86,18 +86,11 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 
 12. As a user, if I begin another tournament, I expect all of the prior tournament's scores to be reset.
 
-13. As a user, I also expect there to be a way to reset the tournament, manually.
+13. As a user, I also expect there to be a way to reset the tournament, manually (the slogan at the top of the page).
 
 ---
 
 ## Stretch Goals
 
-1. **Redesign the "Start Game Page" to include a menu that includes a single-round option.**
+6. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock" (different times depending on difficulty).**
 
-2. **Redesign the "Start Game Page" to include a menu that has a name input ability to personalize the player's score box.**
-
-3. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock".**
-
-4. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a "best of nine" mode where a player has to have 5 round-wins to win the tournament.**
-
-5. **Redesign the "Start Game Page"  and game to add an "easy", "hard", and "extreme" mode, where there will be more or less cards to match between players (on single-player mode, the time to beat will be increased for more difficult levels).**
