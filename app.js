@@ -406,7 +406,7 @@ const changeCurrentPlayerWins = () => {
 
         // MAKING SURE THE ROUND-WINNER ANNOUNCEMENT DOESN'T PLAY AT THE END OF THE TOURNAMENT
         if (player1.wins.innerHTML < tournamentType) {
-            announceRoundWinner();
+            announceRoundWinner(player1.name.innerHTML);
         };
 
         // MAKES SURE THE CURRENT ROUND'S WINNER PLAYS FIRST, NEXT ROUND
@@ -419,7 +419,7 @@ const changeCurrentPlayerWins = () => {
 
         // MAKING SURE THE ROUND-WINNER ANNOUNCEMENT DOESN'T PLAY AT THE END OF THE TOURNAMENT
         if (player2.wins.innerHTML < tournamentType) {
-            announceRoundWinner();
+            announceRoundWinner(player2.name.innerHTML);
         };
 
         // MAKES SURE THE CURRENT ROUND'S WINNER PLAYS FIRST, NEXT ROUND
@@ -440,12 +440,7 @@ const resetGamePage = () => {
     fetchPokemon();
 };
 
-const announceRoundWinner = () => {
-    if (player1.score.innerText > player2.score.innerText) {
-        winner = player1.name.innerText;
-    } else if (player1.score.innerText < player2.score.innerText) {
-        winner = player2.name.innerText;
-    };
+const announceRoundWinner = (winner) => {
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
     if (soundIsOn) {
