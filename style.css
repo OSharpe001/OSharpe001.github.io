@@ -87,6 +87,7 @@ body {
 }
 
 .menu {
+    margin-bottom: 60px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -125,9 +126,9 @@ input {
     margin: 2px 10px 10px auto;
 }
 
-.form-button {
+/* .form-button {
     font-size: 14pt;
-}
+} */
 
 .text-input {
     width: 75%;
@@ -162,7 +163,7 @@ button, form button, .button {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: 0;
 }
@@ -547,6 +548,30 @@ span {
     #sound-options {
         top: 30px;
         left: 20px;
+    }
+
+    button, form button, .button {
+        font-size: 12pt;
+        margin: 5px;
+    }
+
+    .menu {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        font-size: 14pt;
+        margin: 10px auto 2px;
+    }
+
+    .player1-name-label, .player2-name-label {
+        display: block;
+        margin-top: 5px;
+    }
+
+    label {
+        margin: auto auto auto 5px;
+        font-size: 12pt;
     }
 
     .cards {

@@ -44,6 +44,7 @@ const player2NameLabel = document.querySelector(".player2-name-label");
 const soundOptions = document.querySelector("#sound-options");
 const soundOn = document.querySelector("#toggle-sound-on");
 const soundOff = document.querySelector("#toggle-sound-off");
+const footer = document.querySelector("footer");
 
 // LOCAL STORAGE GET AND SET FUNCTIONS
 const storeWins = (tally) => localStorage.setItem("Match Game Wins", JSON.stringify(tally));
