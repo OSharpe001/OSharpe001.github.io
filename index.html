@@ -24,21 +24,55 @@
     </button>
 
     <section id="index-page" class="">
-        <button id="startGame" class="" onclick=startGame()>Play With a Friend</button>
-
+        
         <section class="pokemon index-card" id="face-down">
             <section class="image-container">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
             </section>
         </section>
 
-        <footer>
-            <nav >
-                <button id="portfolio-link">
-                    <a id="to-portfolio" class="button" aria-label="On Click" target="_blank" href="https://osharpesportfolio.vercel.app">O. Sharpe's Portfolio</a>
-                </button>
-            </nav>
-        </footer>
+        <button onclick=openMenu() id="open-menu" class="form-button">Settings</button>
+
+        <form class="menu hidden" onsubmit="return false">
+            <section class="menu-options">
+                <!-- <section id="player-amount">
+                    <h3>How Many Players?</h3>
+                    <label for="amount-of-players">Single Player</label>
+                    <input name="amount-of-players" id="amount-of-players" type="radio" value="1" onchange=handlePlayerAmountChange(value)>
+                    <label for="amount-of-players2">Two Players</label>
+                    <input name="amount-of-players" id="amount-of-players2" type="radio" value="2" onchange=handlePlayerAmountChange(value)>
+                </section> -->
+
+                <section class="player-names">
+                    <label for="player1-rename" class="player1-name-label"><h3>First Player's Name:</h3></label>
+                    <input type="text" id="player1-rename" class="text-input" placeholder="Player 1">
+                    <label for="player2-rename" class="player2-name-label"><h3>Second Player's Name:</h3></label>
+                    <input type="text" id="player2-rename" class="text-input" placeholder="Player 2">
+                </section>
+
+                <section id="game-style">
+                    <h3>Single Game or Tournament?</h3>
+                    <label for="single-or-tournament">Single Game</label>
+                    <input name="single-or-tournament" id="single-or-tournament" type="radio" value="1" onchange=handleGameTypeChange(value)>
+                    <label for="single-or-tournament3">Best of Five</label>
+                    <input name="single-or-tournament" id="single-or-tournament3" type="radio" value="3" onchange=handleGameTypeChange(value)>
+                    <label for="single-or-tournament5">Best of Nine</label>
+                    <input name="single-or-tournament" id="single-or-tournament5" type="radio" value="5" onchange=handleGameTypeChange(value)>
+                </section>
+
+                <section id="difficulty">
+                    <h3>Difficulty Level</h3>
+                    <label for="difficulty-level2">Normal</label>
+                    <input name="difficulty-level" id="difficulty-level2" type="radio" value="9" onchange=handleDifficultyChange(value)>
+                    <label for="difficulty-level4">Extreme</label>
+                    <input name="difficulty-level" id="difficulty-level4" type="radio" value="15" onchange=handleDifficultyChange(value)>
+                </section>
+            </section>
+
+            <button type="submit" onclick=submitForm() class="form-button">Let's Go!</button>
+            <button onclick = closeMenu() id="close-menu" class="form-button">Back</button>
+        </form>
+
     </section>
 
     <section id="game-page" class="">
@@ -65,9 +99,5 @@
     </section>
 
     <script src="app.js"></script>
-    <!-- <script src="/runestone/static/js/jquery.fireworks.js"></script>
-    <script>
-        $('.demo').fireworks({ sound: true, opacity: 0.7, width: '100%', height: '100%' });
-    </script> -->
 </body>
 </html>
