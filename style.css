@@ -149,14 +149,22 @@ input {
     width: 4ch;
 } */
 
-button, form button {
-    width: 9ch;
+button, form button, .button {
+    width: max-content;
     font-size: 12pt;
     font-weight: bold;
+    font-family: sans-serif;
     background-color: #c0eaf1;
     padding: 4px 8px;
     border-radius: 16px;
     margin: 10px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
 }
 
 .reset {
