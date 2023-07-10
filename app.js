@@ -368,6 +368,7 @@ const createPokemonCard = (pokemon, id, level) => {
             setTimeout(() => {flipCardDown(flippedCards[0], id, level);flipCardDown(flippedCards[1], id, level)}, 1000);
             setTimeout(()=>{initializeCardTrackers();changeCurrentPlayer();}, 2000);
             if (soundIsOn) {
+                wrongBuzzer.volume = .2;
                 setTimeout(()=>wrongBuzzer.play(), 1250);
             };
         };
@@ -464,8 +465,8 @@ const announceTournamentWinner = () => {
     tournamentWinnerName.innerHTML = winner;
     tournamentCongrats.classList.toggle("hidden");
     if (soundIsOn) {
-        longApplause.play();
-        cheeringSound.play();
+    longApplause.play();
+    cheeringSound.play();
     };
 
     setTimeout(resetGame, 7000);

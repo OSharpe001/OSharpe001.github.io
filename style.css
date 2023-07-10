@@ -250,12 +250,12 @@ span {
 #players-section {
     font-size: 16pt;
     width: 100%;
-    padding: 20px 50px;
+    padding: 15px 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     left: 0;
     border: 10px ridge blue;
 }
@@ -265,7 +265,7 @@ span {
     height: 100%;
     min-width: 300px;
     max-width: 500px;
-    margin: 20px;
+    margin: 15px;
     border: 1px solid black;
 }
 
