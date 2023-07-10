@@ -574,6 +574,11 @@ span {
         font-size: 12pt;
     }
 
+    #index-page .index-card {
+        width: 81px;
+        height: 81px;
+    }
+
     .cards {
         width: 100%;
     }
