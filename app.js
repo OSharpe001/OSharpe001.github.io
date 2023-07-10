@@ -41,16 +41,25 @@ const player2Rename = document.querySelector("#player2-rename");
 const player1Name = document.querySelector(".player1-name");
 const player2Name = document.querySelector(".player2-name");
 const player2NameLabel = document.querySelector(".player2-name-label");
+const soundOptions = document.querySelector("#sound-options");
+const soundOn = document.querySelector("#toggle-sound-on");
+const soundOff = document.querySelector("#toggle-sound-off");
+
+// LOCAL STORAGE GET AND SET FUNCTIONS
+const storeWins = (tally) => localStorage.setItem("Match Game Wins", JSON.stringify(tally));
+const viewWins = () => JSON.parse(localStorage.getItem("Match Game Wins"));
 
 let cardMatchAmount;
 let cardSelection;
 let level;
 let playerAmount;
 let tournamentType;
+
 // LIST THAT KEEP TRACK OF FLIPPED CARDS TO DICIPHER SCORING SITUATIONS AND FLIPPING BACK UNMATCHED CARDS
 let flippedCardIdList;
 let flippedCards;
 let shuffledCards = [];
+let soundIsOn = true;
 
 // ** SET UP FOR FUTURE POSSIBILITY OF A SINGLE PLAYER GAME (BEAT THE CLOCK)
 // function handlePlayerAmountChange(value) {
@@ -67,6 +76,12 @@ let shuffledCards = [];
 //     };
 //     playerAmount = value;
 // };
+
+const toggleSound = () => {
+    soundOn.classList.toggle("hidden");
+    soundOff.classList.toggle("hidden");
+    soundIsOn = !soundIsOn;
+}
 
 // CHANGING AMOUNT OF ROUNDS TO WIN TO WIN THE TOURNAMENT
 const handleGameTypeChange = (value) => {
@@ -146,10 +161,6 @@ settingsPageCard.addEventListener("click", () => {
     };
 });
 
-// LOCAL STORAGE GET AND SET FUNCTIONS
-const storeWins = (tally) => localStorage.setItem("Match Game Wins", JSON.stringify(tally));
-const viewWins = () => JSON.parse(localStorage.getItem("Match Game Wins"));
-
 // PLAYER OBJECTS TO BETTER CONTROLL THE CURRENT PLAYER, SCORE, WINS, CSS
 const player1 = {
     player: document.querySelector(".player1"),
@@ -202,6 +213,7 @@ const resetGame = () => {
 // SWITCH SCREENS TO ESCAPE THE "START-GAME" PAGE AND ENTER THE "GAME" PAGE
 function startGame() {
     gamePage.classList = "";
+    soundOptions.classList = "";
     indexPage.classList = "hidden";
     initializeLocalStorage();
     initializeScores();
@@ -343,7 +355,9 @@ const createPokemonCard = (pokemon, id, level) => {
         if (flippedCards.length === 2 && flippedCardIdList[0] === flippedCardIdList[1]) {
             initializeCardTrackers();
             changeCurrentPlayerScore();
-            setTimeout(()=>correctBell.play(), 350);
+            if (soundIsOn) {
+                setTimeout(()=>correctBell.play(), 350);
+            };
         } else if (flippedCards.length === 2 && flippedCardIdList[0] !== flippedCardIdList[1]) {
 
             // FUNCTION TO AUTOMATICALLY FLIP BACK UNMATCHED CARDS
@@ -353,7 +367,9 @@ const createPokemonCard = (pokemon, id, level) => {
             };
             setTimeout(() => {flipCardDown(flippedCards[0], id, level);flipCardDown(flippedCards[1], id, level)}, 1000);
             setTimeout(()=>{initializeCardTrackers();changeCurrentPlayer();}, 2000);
-            setTimeout(()=>wrongBuzzer.play(), 1250);
+            if (soundIsOn) {
+                setTimeout(()=>wrongBuzzer.play(), 1250);
+            };
         };
     });
 };
@@ -430,7 +446,9 @@ const announceRoundWinner = () => {
     };
     roundCongrats.classList.toggle("hidden");
     winnerName.innerHTML = winner;
-    shortApplause.play();
+    if (soundIsOn) {
+        shortApplause.play();
+    };
 
     setTimeout(()=>roundCongrats.classList = "hidden winners-announcement", 7500);
     setTimeout(resetGamePage, 8000);
@@ -445,8 +463,10 @@ const announceTournamentWinner = () => {
     };
     tournamentWinnerName.innerHTML = winner;
     tournamentCongrats.classList.toggle("hidden");
-    longApplause.play();
-    cheeringSound.play();
+    if (soundIsOn) {
+        longApplause.play();
+        cheeringSound.play();
+    };
 
     setTimeout(resetGame, 7000);
 };
