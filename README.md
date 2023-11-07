@@ -11,15 +11,6 @@
 - ### Placing an arch on my slogan
 [GeeksforGeeks.org](https://www.geeksforgeeks.org/how-to-create-a-curve-text-using-css3-canvas/)
 
-- ### Using JavaScript to navigate to another page within my app
-[Tabnine.com](https://www.tabnine.com/academy/javascript/how-to-redirect-url-javascript/)
-
-**Not working for some reason-**
-Ended up making it a single page app, utilizing CSS to hide the "currently unnecessary page".
-
-- ### Getting a variable from one JavaScript file to another
-**Using import/export statements is not working.** Will probably have to utilize only one JavaScript file for entire app. Also had to incorporate my game onto the main page, "index.html" (difficulty getting data to transfer between pages. Ended up making a single page app).
-
 - ### Rounding up to the nearest number
 [W3Schools.com](https://www.w3schools.com/jsref/jsref_ceil.asp)
 
@@ -50,7 +41,7 @@ Currently, only the first round's winner announcement appears. I've come to real
 - Currently, this program utilizes info from a RESTful API, from [PokeAPI](https://pokeapi.co). **(subject to change)**
 Also importing two Google fonts from [fonts.googleapis.com](https://fonts.googleapis.com/css?family=Oregano:300,400&display=swap) and [fonts.googleapis.com](https://fonts.googleapis.com/css?family=Sedgwick Ave:300,400&display=swap).
 
-- This app utilizes the client's local storage to keep track of (and retrieve) round-wins.
+- This app utilizes the client's local storage to keep track of round-wins.
 
 ---
 
@@ -93,4 +84,3 @@ Also importing two Google fonts from [fonts.googleapis.com](https://fonts.google
 ## Stretch Goals
 
 6. **Redesign the "Start Game Page" (and game algorithm) to include a menu that has a single player option and format where the player has to "beat the clock" (different times depending on difficulty).**
-
